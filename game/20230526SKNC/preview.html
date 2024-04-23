@@ -1,0 +1,921 @@
+<html lang="ko" data-useragent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36">
+  <head>
+    <script async="" type="text/javascript" src="https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js" id="_sports_glad_sdk"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>네이버 스포츠</title>
+    <script>
+      "Microsoft Internet Explorer" === navigator.appName && (window.onload = function() {
+        "false" !== window.sessionStorage.getItem("gameCenterIeAlert") && (window.sessionStorage.setItem("gameCenterIeAlert", "false"), alert("Internet Explorer 10 이하 버전의 유저에게는 일부 서비스가 정상 작동하지 않을 수 있습니다. 원활한 서비스를 위해 상위 버전으로 업그레이드 후 이용해 주시기를 권해드립니다."))
+      })
+    </script>
+    <link href="https://ssl.pstatic.net/static.sports/resources/web-ui/game/230720-160716/static/css/main.cb1e0f2a.chunk.css" rel="stylesheet">
+    <style type="text/css" id="wpc-source-style">
+      @charset "UTF-8";
+
+      .webplayer-internal-source-shadow {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .webplayer-internal-source-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .webplayer-internal-source-renderoverlay {
+        display: none;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <style type="text/css" id="wpc-core-style">
+      @charset "UTF-8";
+
+      .wpc-full {
+        width: 100%;
+        height: 100%;
+      }
+
+      .wpc-pos-rel {
+        position: relative;
+      }
+
+      .wpc-pos-abs {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+
+      .webplayer-internal-core-dimmed {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+      }
+
+      .wpc-dis-hid {
+        display: none;
+      }
+
+      .webplayer-internal-core-ad-ui {
+        position: absolute;
+        background-color: #000;
+      }
+    </style>
+    <style type="text/css">
+      .lf-progress {
+        -webkit-appearance: none;
+        -moz-apperance: none;
+        width: 100%;
+        /* margin: 0 10px; */
+        height: 4px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .lf-progress:focus {
+        outline: none;
+        border: none;
+      }
+
+      .lf-progress::-moz-range-track {
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+      }
+
+      .lf-progress::-webkit-slider-thumb {
+        -webkit-appearance: none !important;
+        height: 13px;
+        width: 13px;
+        border: 0;
+        border-radius: 50%;
+        background: #0fccce;
+        cursor: pointer;
+      }
+
+      .lf-progress::-moz-range-thumb {
+        -moz-appearance: none !important;
+        height: 13px;
+        width: 13px;
+        border: 0;
+        border-radius: 50%;
+        background: #0fccce;
+        cursor: pointer;
+      }
+
+      .lf-progress::-ms-track {
+        width: 100%;
+        height: 3px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+
+      .lf-progress::-ms-fill-lower {
+        background: #ccc;
+        border-radius: 3px;
+      }
+
+      .lf-progress::-ms-fill-upper {
+        background: #ccc;
+        border-radius: 3px;
+      }
+
+      .lf-progress::-ms-thumb {
+        border: 0;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background: #0fccce;
+        cursor: pointer;
+      }
+
+      .lf-progress:focus::-ms-fill-lower {
+        background: #ccc;
+      }
+
+      .lf-progress:focus::-ms-fill-upper {
+        background: #ccc;
+      }
+
+      .lf-player-container :focus {
+        outline: 0;
+      }
+
+      .lf-popover {
+        position: relative;
+      }
+
+      .lf-popover-content {
+        display: inline-block;
+        position: absolute;
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, -10px);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+      }
+
+      .lf-popover-content.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 0px);
+      }
+
+      .lf-player-btn-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .lf-player-btn {
+        cursor: pointer;
+        fill: #999;
+        width: 14px;
+      }
+
+      .lf-player-btn.active {
+        fill: #555;
+      }
+
+      .lf-popover {
+        position: relative;
+      }
+
+      .lf-popover-content {
+        display: inline-block;
+        position: absolute;
+        background-color: #ffffff;
+        opacity: 1;
+        transform: translate(0, -10px);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+        padding: 10px;
+      }
+
+      .lf-popover-content.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 0px);
+      }
+
+      .lf-arrow {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        bottom: -9px;
+        border-style: solid;
+        border-width: 10px 10px 0px 10px;
+      }
+
+      .lf-left-align,
+      .lf-left-align .lfarrow {
+        left: 0;
+        right: unset;
+      }
+
+      .lf-right-align,
+      .lf-right-align .lf-arrow {
+        right: 0;
+        left: unset;
+      }
+
+      .lf-text-input {
+        border: 1px #ccc solid;
+        border-radius: 5px;
+        padding: 3px;
+        width: 60px;
+        margin: 0;
+      }
+
+      .lf-color-picker {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 90px;
+      }
+
+      .lf-color-selectors {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .lf-color-component {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .lf-color-component strong {
+        width: 40px;
+      }
+
+      .lf-color-component input[type='range'] {
+        margin: 0 0 0 10px;
+      }
+
+      .lf-color-component input[type='number'] {
+        width: 50px;
+        margin: 0 0 0 10px;
+      }
+
+      .lf-color-preview {
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5px;
+      }
+
+      .lf-preview {
+        height: 60px;
+        width: 60px;
+      }
+
+      .lf-popover-snapshot {
+        width: 150px;
+      }
+
+      .lf-popover-snapshot h5 {
+        margin: 5px 0 10px 0;
+        font-size: 0.75rem;
+      }
+
+      .lf-popover-snapshot a {
+        display: block;
+        text-decoration: none;
+      }
+
+      .lf-popover-snapshot a:before {
+        content: '⥼';
+        margin-right: 5px;
+      }
+
+      .lf-popover-snapshot .lf-note {
+        display: block;
+        margin-top: 10px;
+        color: #999;
+      }
+
+      .lf-player-controls>div {
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+
+      .lf-player-controls>div:first-child {
+        margin-left: 0px;
+      }
+
+      .lf-player-controls>div:last-child {
+        margin-right: 0px;
+      }
+    </style>
+    <script type="text/javascript" src="https://ssl.pstatic.net/static.sports/resources/web-ui/nclk_nos.js" id="_nclk_js"></script>
+    <script type="text/javascript" src="https://ssl.pstatic.net/spi/js/release/ko_KR/splugin.m.js?1408377" async=""></script>
+    <link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/static.sports/resources/web-ui/game/230720-160716/static/css/15.eeabc061.chunk.css">
+    <script charset="utf-8" src="https://ssl.pstatic.net/static.sports/resources/web-ui/game/230720-160716/static/js/15.45be5961.chunk.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://ssl.pstatic.net/static.cbox/js/cbox.core.js?v=1408377"></script>
+    <script src="https://ssl.pstatic.net/static/sportsdev/js/lcslog_v0.14.0.js" async=""></script>
+    <style type="text/css" id="_cbox_default_style_"></style>
+    <script type="text/javascript" src="https://ssl.pstatic.net/static.cbox/20230711150220/js/cbox.all.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://ssl.pstatic.net/tveta/libs/glad/prod/2.17.1/gfp-sdk.js" async="" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8" src="https://ssl.pstatic.net/static.cbox/js/cbox.core.js?v=1408377"></script>
+    <script type="text/javascript" src="https://ssl.pstatic.net/tveta/libs/glad/prod/2.17.1/gfp-sentry-bundle-1.0.1.js" async="" charset="utf-8"></script>
+    <script type="text/javascript" src="https://ssl.pstatic.net/tveta/libs/glad/prod/2.17.1/gfp-ext-nda.js" async="" charset="utf-8"></script>
+    <link type="text/css" rel="stylesheet" href="https://static-feedback.pstatic.net/css/cbox/sportsvs/e800cd7a-bd56-4c63-95f9-84079a6db299/8d14db49-cd3c-49a5-91d4-7815c0515076/comment_sports_talk.css" charset="utf-8">
+    <script src="https://ssl.pstatic.net/static/sportsdev/js/lcslog_v0.14.0.js" async=""></script>
+  </head>
+  <body class="GAMECENTER">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="u_skip">
+        <a href="#content">본문 바로가기</a>
+      </div>
+      <div id="wrap">
+        <div id="content" class="sticky_boundary" role="main" style="">
+          <div class="Home_container__3HKK4">
+            <div class="Home_main_section__y9jR4">
+              <section class="Home_game_panel__97L_8">
+                <div class="Home_game_contents__35IMT">
+                  <div class="PowerTab_comp_power_tab__3ykme">
+                    <h3 class="blind">전력</h3>
+                    <div class="TeamPower_comp_team_power___LgWg">
+                      <h4 class="blind">양팀 정보</h4>
+                      <div class="TeamPower_team_info_area__1VWxM">
+                        <div class="TeamPower_away_team__2KuN1">
+                          <div class="TeamPower_name_area__2WGfA">SK</div>
+                          <div class="TeamPower_record_area__BqzSJ">
+                            <span class="TeamPower_rank__1hMAz">4위</span>
+                            <span class="TeamPower_record__pEiXL">
+                              <span class="TeamPower_result__3y6nW">26승</span>
+                              <span class="TeamPower_result__3y6nW">0무</span>
+                              <span class="TeamPower_result__3y6nW">23패</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="TeamPower_versus__1CO68">VS</div>
+                        <div class="TeamPower_home_team__2Ztj7">
+                          <div class="TeamPower_name_area__2WGfA">NC</div>
+                          <div class="TeamPower_record_area__BqzSJ">
+                            <span class="TeamPower_rank__1hMAz">8위</span>
+                            <span class="TeamPower_record__pEiXL">
+                              <span class="TeamPower_result__3y6nW">23승</span>
+                              <span class="TeamPower_result__3y6nW">0무</span>
+                              <span class="TeamPower_result__3y6nW">28패</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="TeamPower_detail_area__UlnCk">
+                        <table class="TeamPower_power_info_table__gM4Gi">
+                          <caption>
+                            <span class="blind">양팀 전력 비교</span>
+                          </caption>
+                          <colgroup>
+                            <col class="col1">
+                            <col class="TeamPower_col2__34ipx">
+                            <col class="col3">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">
+                                <span class="blind">SK</span>
+                              </th>
+                              <th scope="col">
+                                <span class="blind">구분</span>
+                              </th>
+                              <th scope="col">
+                                <span class="blind">NC</span>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="TeamPower_result_area__1Oj-v TeamPower_away__wGbqW">
+                                  <span class="TeamPower_result__3y6nW TeamPower_type_win__2IRXC">승</span>
+                                  <span class="TeamPower_result__3y6nW TeamPower_type_lose__3h4t5">패</span>
+                                  <span class="TeamPower_result__3y6nW TeamPower_type_lose__3h4t5">패</span>
+                                  <span class="TeamPower_result__3y6nW TeamPower_type_win__2IRXC">승</span>
+                                  <span class="TeamPower_result__3y6nW TeamPower_type_win__2IRXC">승</span>
+                                </div>
+                              </td>
+                              <th scope="row">최근경기</th>
+                              <td>
+                                <div class="TeamPower_result_area__1Oj-v TeamPower_home__qMLDk">
+                                <span class="TeamPower_result__3y6nW TeamPower_type_lose__3h4t5">패</span>
+                                  <span class="TeamPower_result__3y6nW TeamPower_type_win__2IRXC">승</span>
+                                  <span class="TeamPower_result__3y6nW TeamPower_type_win__2IRXC">승</span>
+                                  <span class="TeamPower_result__3y6nW TeamPower_type_win__2IRXC">승</span>
+                                  <span class="TeamPower_result__3y6nW TeamPower_type_win__2IRXC">승</span>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="TeamPower_score_area__3NSLd">
+                                  <div class="TeamPower_chart__3_cIp">
+                                    <span class="TeamPower_current__hkg2j" style="width: 53%; color: rgb(256, 0, 0);"></span>
+                                  </div>
+                                  <div class="TeamPower_score__2zqG4">0.530</div>
+                                </div>
+                              </td>
+                              <th scope="row">승률</th>
+                              <td>
+                                <div class="TeamPower_score_area__3NSLd">
+                                  <div class="TeamPower_chart__3_cIp">
+                                    <span class="TeamPower_current__hkg2j" style="width: 45%; color: rgb(29, 70, 125);"></span>
+                                  </div>
+                                  <div class="TeamPower_score__2zqG4">0.451</div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="TeamPower_score_area__3NSLd">
+                                  <div class="TeamPower_chart__3_cIp">
+                                    <span class="TeamPower_current__hkg2j" style="width: 0%; color: rgb(256, 0, 0);"></span>
+                                  </div>
+                                  <div class="TeamPower_score__2zqG4">0.000</div>
+                                </div>
+                              </td>
+                              <th scope="row">타율</th>
+                              <td>
+                                <div class="TeamPower_score_area__3NSLd">
+                                  <div class="TeamPower_chart__3_cIp">
+                                    <span class="TeamPower_current__hkg2j" style="width: 0%; color: rgb(29, 70, 125);"></span>
+                                  </div>
+                                  <div class="TeamPower_score__2zqG4">0.000</div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="TeamPower_score_area__3NSLd">
+                                  <div class="TeamPower_chart__3_cIp">
+                                    <span class="TeamPower_current__hkg2j" style="width: 100%; color: rgb(256, 0, 0);"></span>
+                                  </div>
+                                  <div class="TeamPower_score__2zqG4">0.00</div>
+                                </div>
+                              </td>
+                              <th scope="row">평균자책</th>
+                              <td>
+                                <div class="TeamPower_score_area__3NSLd">
+                                  <div class="TeamPower_chart__3_cIp">
+                                    <span class="TeamPower_current__hkg2j" style="width: 100%; color: rgb(29, 70, 125);"></span>
+                                  </div>
+                                  <div class="TeamPower_score__2zqG4">0.00</div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="PlayerVS_comp_player_info__e3Joz">
+                      <h4 class="blind">선발 선수</h4>
+                      <div class="PlayerVS_away_team__6AbC_" style="color: rgb(256, 0, 0);">
+                        <a href="/player/index?playerId=53375&amp;category=kbo&amp;tab=record&amp;from=sports" class="PlayerVS_link__3vl9Y">
+                          <div class="PlayerVS_profile__3JaOB">
+                            <img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/person/middle/2020/50859.jpg" alt="" width="75" height="93">
+                          </div>
+                          <div class="PlayerVS_name__2LQg_">오원석</div>
+                        </a>
+                      </div>
+                      <div class="PlayerVS_versus__rk4_e">
+                        <span class="PlayerVS_title__21dms" aria-hidden="true">선발</span>
+                        <span class="PlayerVS_vs__2Gzkn">VS</span>
+                      </div>
+                      <div class="PlayerVS_home_team__rY7Xa" style="color: rgb(29, 70, 125);">
+                        <a href="/player/index?playerId=64021&amp;category=kbo&amp;tab=record&amp;from=sports" class="PlayerVS_link__3vl9Y">
+                          <div class="PlayerVS_profile__3JaOB">
+                            <img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/person/middle/2023/60263.jpg" alt="" width="75" height="93">
+                          </div>
+                          <div class="PlayerVS_name__2LQg_">이재학</div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="StartPlayer_comp_player_table__1TGqp">
+                      <table class="StartPlayer_data_table__Q1TvG">
+                        <caption>
+                          <span class="blind">선발 선수 전력 비교</span>
+                        </caption>
+                        <colgroup>
+                          <col class="col1">
+                          <col class="StartPlayer_col2__uNyR_">
+                          <col class="col3">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">
+                              <span class="blind">SK</span>
+                            </th>
+                            <th scope="col">
+                              <span class="blind">구분</span>
+                            </th>
+                            <th scope="col">
+                              <span class="blind">NC</span>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="StartPlayer_score_area__2ENIv">5 <span class="StartPlayer_text__2zH4Y">승</span> 3 <span class="StartPlayer_text__2zH4Y">패</span>
+                              </div>
+                            </td>
+                            <th>승패</th>
+                            <td>
+                              <div class="StartPlayer_score_area__2ENIv">1 <span class="StartPlayer_text__2zH4Y">승</span> 0 <span class="StartPlayer_text__2zH4Y">패</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="StartPlayer_score_area__2ENIv">0</div>
+                            </td>
+                            <th>이닝</th>
+                            <td>
+                              <div class="StartPlayer_score_area__2ENIv">0</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="StartPlayer_score_area__2ENIv">6.51</div>
+                            </td>
+                            <th>평균 자책</th>
+                            <td>
+                              <div class="StartPlayer_score_area__2ENIv">5.14</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="StartPlayer_score_area__2ENIv">0.00</div>
+                            </td>
+                            <th>WHIP</th>
+                            <td>
+                              <div class="StartPlayer_score_area__2ENIv">0.00</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!--
+                    <div class="PlayerVS_comp_player_info__e3Joz PlayerVS_top_player__93AEU">
+                      <h4 class="blind">키플레이어 선수</h4>
+                      <div class="PlayerVS_away_team__6AbC_" style="color: rgb(256, 0, 0);">
+                        <a href="/player/index?playerId=67304&amp;category=kbo&amp;tab=record&amp;from=sports" class="PlayerVS_link__3vl9Y">
+                          <div class="PlayerVS_profile__3JaOB">
+                            <img src="https://sports-phinf.pstatic.net/player/kbo/default/67304.png?type=w150" alt="" width="75" height="93">
+                          </div>
+                          <div class="PlayerVS_name__2LQg_">김혜성</div>
+                        </a>
+                      </div>
+                      <div class="PlayerVS_versus__rk4_e">
+                        <span class="PlayerVS_title__21dms" aria-hidden="true">키플레이어</span>
+                        <span class="PlayerVS_vs__2Gzkn">VS</span>
+                      </div>
+                      <div class="PlayerVS_home_team__rY7Xa" style="color: rgb(29, 70, 125);">
+                        <a href="/player/index?playerId=53554&amp;category=kbo&amp;tab=record&amp;from=sports" class="PlayerVS_link__3vl9Y">
+                          <div class="PlayerVS_profile__3JaOB">
+                            <img src="https://sports-phinf.pstatic.net/player/kbo/default/53554.png?type=w150" alt="" width="75" height="93">
+                          </div>
+                          <div class="PlayerVS_name__2LQg_">김민석</div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="TopPlayer_comp_player_table__1wL5X">
+                      <table class="TopPlayer_data_table__2rw7Y">
+                        <caption>
+                          <span class="blind">탑플레이어 전력 비교</span>
+                        </caption>
+                        <colgroup>
+                          <col class="col1">
+                          <col class="TopPlayer_col2__skQRH">
+                          <col class="col3">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">
+                              <span class="blind">키움</span>
+                            </th>
+                            <th scope="col">
+                              <span class="blind">구분</span>
+                            </th>
+                            <th scope="col">
+                              <span class="blind">롯데</span>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">0.324</div>
+                            </td>
+                            <th>타율</th>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">0.261</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">111</div>
+                            </td>
+                            <th>안타</th>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">57</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">5</div>
+                            </td>
+                            <th>홈런</th>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">2</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">35</div>
+                            </td>
+                            <th>타점</th>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">24</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">
+                                <span class="TopPlayer_text__3GEpn">타율</span> 0.368 <br class="TopPlayer_line_break__uB7gH">
+                                <span class="TopPlayer_hit__2T-3z">
+                                  <span class="TopPlayer_text__3GEpn">안타</span> 7 </span>
+                                <span class="TopPlayer_text__3GEpn">홈런</span> 0
+                              </div>
+                            </td>
+                            <th>상대전적</th>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">
+                                <span class="TopPlayer_text__3GEpn">타율</span> 0.316 <br class="TopPlayer_line_break__uB7gH">
+                                <span class="TopPlayer_hit__2T-3z">
+                                  <span class="TopPlayer_text__3GEpn">안타</span> 6 </span>
+                                <span class="TopPlayer_text__3GEpn">홈런</span> 0
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">
+                                <span class="TopPlayer_point__1SeZa">
+                                  <span class="TopPlayer_text__3GEpn">타율</span> 0.333 </span>
+                                <br class="TopPlayer_line_break__uB7gH">
+                                <span class="TopPlayer_hit__2T-3z">
+                                  <span class="TopPlayer_text__3GEpn">안타</span> 7 </span>
+                                <span class="TopPlayer_text__3GEpn">홈런</span> 0
+                              </div>
+                            </td>
+                            <th>최근 <br class="TopPlayer_line_break__uB7gH"> 5경기 </th>
+                            <td>
+                              <div class="TopPlayer_score_area__2gAGU">
+                                <span class="TopPlayer_point__1SeZa">
+                                  <span class="TopPlayer_text__3GEpn">타율</span> 0.333 </span>
+                                <br class="TopPlayer_line_break__uB7gH">
+                                <span class="TopPlayer_hit__2T-3z">
+                                  <span class="TopPlayer_text__3GEpn">안타</span> 6 </span>
+                                <span class="TopPlayer_text__3GEpn">홈런</span> 0
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <a href="/player/index.nhn?playerId=67304&amp;category=kbo&amp;tab=record&amp;from=sports" class="TopPlayer_link_away_player__rgCwp">
+                        <span class="blind">김혜성 전력 더보기</span>
+                      </a>
+                      <a href="/player/index.nhn?playerId=53554&amp;category=kbo&amp;tab=record&amp;from=sports" class="TopPlayer_link_home_player__1qrqn">
+                        <span class="blind">김민석 전력 더보기</span>
+                      </a>
+                    </div>
+                    <div class="TopPlayer_comp_square_chart__vlEy3">
+                      <h4 class="TopPlayer_chart_title__23vUE">HOT &amp; COLD ZONE</h4>
+                      <a class="TopPlayer_chart_group__2WOeA">
+                        <div class="TopPlayer_chart_box__3Ziw3">
+                          <div class="TopPlayer_outer__2gBcd TopPlayer_step4__2Y6Tg">
+                            <span class="blind">바깥</span>
+                            <span class="TopPlayer_average__Cp6hq">0.389</span>
+                          </div>
+                          <div class="TopPlayer_outer__2gBcd TopPlayer_step4__2Y6Tg">
+                            <span class="blind">바깥</span>
+                            <span class="TopPlayer_average__Cp6hq">0.333</span>
+                          </div>
+                          <div class="TopPlayer_outer__2gBcd TopPlayer_step3__yI0XZ">
+                            <span class="blind">바깥</span>
+                            <span class="TopPlayer_average__Cp6hq">0.211</span>
+                          </div>
+                          <div class="TopPlayer_outer__2gBcd TopPlayer_step2__3Toed">
+                            <span class="blind">바깥</span>
+                            <span class="TopPlayer_average__Cp6hq">0.122</span>
+                          </div>
+                          <div class="TopPlayer_inner_box__wV7V_">
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step4__2Y6Tg">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.389</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step4__2Y6Tg">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.318</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step2__3Toed">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.200</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step4__2Y6Tg">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.400</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step4__2Y6Tg">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.400</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step5__1vklj">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.424</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step4__2Y6Tg">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.346</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step5__1vklj">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.412</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step4__2Y6Tg">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.327</span>
+                            </div>
+                          </div>
+                        </div>
+                        <strong class="TopPlayer_name__1-fsD">김혜성</strong>
+                      </a>
+                      <a class="TopPlayer_chart_group__2WOeA">
+                        <div class="TopPlayer_chart_box__3Ziw3">
+                          <div class="TopPlayer_outer__2gBcd TopPlayer_step1__2WJ71">
+                            <span class="blind">바깥</span>
+                            <span class="TopPlayer_average__Cp6hq">0.000</span>
+                          </div>
+                          <div class="TopPlayer_outer__2gBcd TopPlayer_step1__2WJ71">
+                            <span class="blind">바깥</span>
+                            <span class="TopPlayer_average__Cp6hq">0.000</span>
+                          </div>
+                          <div class="TopPlayer_outer__2gBcd TopPlayer_step2__3Toed">
+                            <span class="blind">바깥</span>
+                            <span class="TopPlayer_average__Cp6hq">0.154</span>
+                          </div>
+                          <div class="TopPlayer_outer__2gBcd TopPlayer_step3__yI0XZ">
+                            <span class="blind">바깥</span>
+                            <span class="TopPlayer_average__Cp6hq">0.283</span>
+                          </div>
+                          <div class="TopPlayer_inner_box__wV7V_">
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step4__2Y6Tg">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.385</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step3__yI0XZ">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.250</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step1__2WJ71">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.091</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step3__yI0XZ">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.214</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step5__1vklj">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.500</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step3__yI0XZ">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.250</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step5__1vklj">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.476</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step1__2WJ71">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.067</span>
+                            </div>
+                            <div class="TopPlayer_inner__1buJj TopPlayer_step4__2Y6Tg">
+                              <span class="blind">안쪽</span>
+                              <span class="TopPlayer_average__Cp6hq">0.304</span>
+                            </div>
+                          </div>
+                        </div>
+                        <strong class="TopPlayer_name__1-fsD">김민석</strong>
+                      </a>
+                    </div>
+                    <p class="TopPlayer_chart_info__uchht">키플레이어는 팀의 최근 5경기 중 3경기 이상 출장 선수 중 <br class="TopPlayer_line_break__uB7gH">가장 타율이 높은 선수 입니다. </p>
+                    -->
+                  </div>
+                  <div class="lineup_group">
+                    <div class="Lineup_lineup_area__2aNOv">
+                      <h4 class="Lineup_lineup_title__1WigY">
+                        <img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/emblem/regular/2020/emblem_SK.png" class="logo" alt="" width="40" height="40">SK선발
+                      </h4>
+                      <ol class="Lineup_lineup_list__1_CNQ">
+                        <li class="Lineup_lineup_item__32s4M">
+                          <a href="https://www.koreabaseball.com/Record/Player/PitcherDetail/Basic.aspx?playerId=50859" class="Lineup_link_player__1_3a2">
+                            <span class="Lineup_order__1-EPy Lineup_type_badge__2Y2u9" style="background-color: rgb(29, 70, 125);">
+                              <span class="Lineup_text__2lYRS">선발</span>
+                            </span>
+                            <span class="Lineup_image__1uP9b">
+                              <img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/person/middle/2020/50859.jpg" alt="" width="100" height="124">
+                            </span>
+                            <div class="Lineup_info_area__3c3uk">
+                              <strong class="Lineup_name__jV19m">오원석</strong>
+                              <em class="Lineup_position__265hb">좌투</em>
+                            </div>
+                          </a>
+                        </li>
+                          <script type="text/javascript">
+                            let pIds1 = [50854, 67893, 75847, 53827, 76267, 62895, 69813, 50820, 62864];
+                            let pName1 = ["최지훈", "박성한", "최정", "에레디아", "최주환", "한유섬", "하재훈", "전의산", "김민식"];
+                            let pos1 = ["중견수", "유격수", "3루수", "지명타자", "2루수", "우익수", "좌익수", "1루수", "포수"];
+                            let hand1 = ["좌타", "좌타", "우타", "우타", "좌타", "좌타", "우타", "좌타", "좌타"];
+                            let year = [2020, 2020, 2020, 2024, 2023, 2020, 2020, 2020, 2024];
+                            for (var i = 1; i < 10; i++) {
+                              document.write('<li class="Lineup_lineup_item__32s4M">');
+                              document.write('<a href="https://www.koreabaseball.com/Record/Player/HitterDetail/Basic.aspx?playerId=' + pIds1[i - 1] + '" class="Lineup_link_player__1_3a2">');
+                              document.write('<span class="Lineup_order__1-EPy" style="color: rgb(29, 70, 125);">' + i + '</span>');
+                              document.write('<span class="Lineup_image__1uP9b">');
+                              document.write('<img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/person/middle/' + year[i - 1] + '/' + pIds1[i - 1] + '.jpg" alt="" width="100" height="124">');
+                              document.write('</span>');
+                              document.write('<div class="Lineup_info_area__3c3uk">');
+                              document.write('<strong class="Lineup_name__jV19m">' + pName1[i - 1] + '</strong>');
+                              document.write('<em class="Lineup_position__265hb">' + pos1[i - 1] + ', ' + hand1[i - 1] + '</em>');
+                              document.write('</div>');
+                              document.write('</a>');
+                            }
+                          </script>
+                        </li>
+                      </ol>
+                    </div>
+                    <div class="Lineup_lineup_area__2aNOv">
+                      <h4 class="Lineup_lineup_title__1WigY">
+                        <img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/emblem/regular/2024/emblem_NC.png" class="logo" alt="" width="40" height="40">SK선발
+                      </h4>
+                      <ol class="Lineup_lineup_list__1_CNQ">
+                        <li class="Lineup_lineup_item__32s4M">
+                          <a href="https://www.koreabaseball.com/Record/Player/PitcherDetail/Basic.aspx?playerId=60263" class="Lineup_link_player__1_3a2">
+                            <span class="Lineup_order__1-EPy Lineup_type_badge__2Y2u9" style="background-color: rgb(29, 70, 125);">
+                              <span class="Lineup_text__2lYRS">선발</span>
+                            </span>
+                            <span class="Lineup_image__1uP9b">
+                              <img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/person/middle/2024/60263.jpg" alt="" width="100" height="124">
+                            </span>
+                            <div class="Lineup_info_area__3c3uk">
+                              <strong class="Lineup_name__jV19m">이재학</strong>
+                              <em class="Lineup_position__265hb">우언</em>
+                            </div>
+                          </a>
+                        </li>
+                          <script type="text/javascript">
+                            let pIds2 = [77532, 62907, 79215, 53955, 63963, 62244, 69995, 51907, 66965];
+                            let pName2 = ["손아섭", "박민우", "박건우", "마틴", "권희동", "박세혁", "서호철", "김주원", "도태훈"];
+                            let pos2 = ["지명타자", "2루수", "우익수", "중견수", "좌익수", "포수", "3루수", "유격수", "1루수"];
+                            let hand2 = ["좌타", "좌타", "우타", "좌타", "우타", "좌타", "우타", "양타", "좌타"];
+                            let year2 = [2024, 2024, 2024, 2023, 2024, 2024, 2024, 2024, 2024];
+                            for (var i = 1; i < 10; i++) {
+                              document.write('<li class="Lineup_lineup_item__32s4M">');
+                              document.write('<a href="https://www.koreabaseball.com/Record/Player/HitterDetail/Basic.aspx?playerId=' + pIds2[i - 1] + '" class="Lineup_link_player__1_3a2">');
+                              document.write('<span class="Lineup_order__1-EPy" style="color: rgb(29, 70, 125);">' + i + '</span>');
+                              document.write('<span class="Lineup_image__1uP9b">');
+                              document.write('<img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/person/middle/' + year2[i - 1] + '/' + pIds2[i - 1] + '.jpg" alt="" width="100" height="124">');
+                              document.write('</span>');
+                              document.write('<div class="Lineup_info_area__3c3uk">');
+                              document.write('<strong class="Lineup_name__jV19m">' + pName2[i - 1] + '</strong>');
+                              document.write('<em class="Lineup_position__265hb">' + pos2[i - 1] + ', ' + hand2[i - 1] + '</em>');
+                              document.write('</div>');
+                              document.write('</a>');
+                            }
+                          </script>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
