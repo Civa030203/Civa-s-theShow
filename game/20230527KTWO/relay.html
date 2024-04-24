@@ -5143,7 +5143,7 @@
                                                             var batters = 1;
                                                             var startBorder = 8;
                                                             var endBorder = 8;
-                                                            var batterAvgs = ["타율 0.226"];
+                                                            var batterAvgs = ["타율 0.228"];
                                                             var batterInfoValues = [[2, 1, 0, 0, 0, 0, 1, 0]];
                                                             var batterInfoItems = ["타석", "타수", "안타", "득점", "타점", "홈런", "볼넷", "피삼진"];
                                                             var batterResults = [];
@@ -5200,7 +5200,11 @@
                                                                 }
                                                                 t += '</div>';
                                                                 t += '<ul class="RelayList_history_list__13jzg">';
-                                                                var balls = batterBalls[i].length;
+                                                                var balls = 0;
+                                                                for (var k = 0; k <= batterBalls[i].length; k++) {
+                                                                  var a = batterBalls[i][k];
+                                                                  if (a == "타격" || a == "스트라이크" || a == "파울" || a == "볼" || a == "번트파울" || a == "번트헛스윙" || a == "헛스윙") { balls += 1;}
+                                                                }
                                                                 for (var j = batterBalls[i].length; j >= 0; j--) {
                                                                     if (batterBalls[i][j] == "타격") {
                                                                         t += '<li class="RelayList_history_item__UEQst RelayList_type_pitch__3jVsu"><em class="RelayList_pitch__38zIi"><span class="RelayList_pitch_number__YlthP RelayList_type_hit__14Kiy">' + Number(balls) + '</span><span class="blind">구</span><span class="RelayList_text__tFNjV">' + batterBalls[i][j] + '</span></em><span class="RelayList_ball_info__2Ze9H"></span></li>';
@@ -5384,7 +5388,11 @@
                                                                 }
                                                                 t += '</div>';
                                                                 t += '<ul class="RelayList_history_list__13jzg">';
-                                                                var balls = batterBalls[i].length;
+                                                                var balls = 0;
+                                                                for (var k = 0; k <= batterBalls[i].length; k++) {
+                                                                  var a = batterBalls[i][k];
+                                                                  if (a == "타격" || a == "스트라이크" || a == "파울" || a == "볼" || a == "번트파울" || a == "번트헛스윙" || a == "헛스윙") { balls += 1;}
+                                                                }
                                                                 for (var j = batterBalls[i].length; j >= 0; j--) {
                                                                     if (batterBalls[i][j] == "타격") {
                                                                         t += '<li class="RelayList_history_item__UEQst RelayList_type_pitch__3jVsu"><em class="RelayList_pitch__38zIi"><span class="RelayList_pitch_number__YlthP RelayList_type_hit__14Kiy">' + Number(balls) + '</span><span class="blind">구</span><span class="RelayList_text__tFNjV">' + batterBalls[i][j] + '</span></em><span class="RelayList_ball_info__2Ze9H"></span></li>';
