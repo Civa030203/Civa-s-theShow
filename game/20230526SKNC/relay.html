@@ -4899,7 +4899,7 @@
         var awayInfo = [];
         var homeInfos = [];
         var homeInfo = [];
-        var teamImages = ["https://i.namu.wiki/i/UFPLbBbUfEeUP8gMwVH-kvn-X3L_VSWhi8QRVUOyFbpvnm3CkPQM54mfRA1H5wGnFHm_wRvI7A_ohLpQnsgFq3429t9vijqj-buWV_9ZeqyF3pWBow9ZgLZWMSd39usIGd3jnuvjQRCmzjYok2pbKw.svg", "https://sports-phinf.pstatic.net/team/kbo/default/NC.png?type=f108_108"];
+        var teamInfos = [[2020, 9001, "SK"], [2024, 11001, "NC"]]
         var awayScore = ["0", "2", "0", "1", "0", "1", "2", "0", "0"];
         var homeScore = ["0", "0", "0", "4", "0", "0", "2", "1", "-"];
         var awayTeamScoreMisc = ["8", "0", "5"]; // H E B
@@ -4935,9 +4935,9 @@
         gameInfos.push("gameState", "gameDate", "gameStadium");
         gameInfo.push("경기종료", "05.26 18:30", "창원");
         awayInfos.push("awayTeamName", "awayTeamPitcher");
-        awayInfo.push("SK", "패-박민호");
+        awayInfo.push(teamInfos[0][2], "패-박민호");
         homeInfos.push("homeTeamName", "homeTeamPitcher");
-        homeInfo.push("NC", "승-이민호");
+        homeInfo.push(teamInfos[1][2], "승-이민호");
     </script>
     <div id="root">
         <div class="u_skip"><a href="#content">본문 바로가기</a></div>
@@ -4972,7 +4972,7 @@
                                         <div class="MatchBox_image__3CcVt" id="awayTeamImage">
                                             <script type="text/javascript">
                                                 var t = "";
-                                                t += '<img src="' + teamImages[0] + '" width="54" height="54">';
+                                                t += '<img src="' + "https://statiz.sporki.com/data/team/ci/" + teamInfos[0][0] + "/" + teamInfos[0][1] + ".svg" + '" width="54" height="54">';
                                                 var a = document.getElementById('awayTeamImage');
                                                 a.innerHTML = t;
                                             </script>
@@ -4998,7 +4998,7 @@
                                         <div class="MatchBox_image__3CcVt" id="homeTeamImage">
                                             <script type="text/javascript">
                                                 var t = "";
-                                                t += '<img src="' + teamImages[1] + '" width="54" height="54">';
+                                                t += '<img src="' + "https://statiz.sporki.com/data/team/ci/" + teamInfos[1][0] + "/" + teamInfos[1][1] + ".svg" + '" width="54" height="54">';
                                                 var a = document.getElementById('homeTeamImage');
                                                 a.innerHTML = t;
                                             </script></div>
