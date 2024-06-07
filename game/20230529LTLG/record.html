@@ -342,6 +342,60 @@
   </head>
   <body class="GAMECENTER">
     <noscript>You need to enable JavaScript to run this app.</noscript>
+      <script>
+          var gameInfos = [];
+          var gameInfo = [];
+          var awayInfos = [];
+          var awayInfo = [];
+          var homeInfos = [];
+          var homeInfo = [];
+          var teamInfos = [[2024, 3001, "롯데"], [2024, 5002, "LG"]]
+          var awayScore = ["0", "1", "1", "0", "0", "0", "1", "0", "4"];
+          var homeScore = ["0", "0", "0", "0", "0", "2", "0", "0", "0"];
+          var awayTeamScoreMisc = ["14", "2", "4"]; // H E B
+          var homeTeamScoreMisc = ["10", "1", "5"]; // H E B
+          var pEntry = [["김진욱", 2024, 51516, 1, 0, 0, "승리"], ["함덕주", 2024, 63248, "1 ⅔", 4, 1, "패전"]];
+          var teamRecord = [[14, 1, 1, 5, 2, 2], [10, 0, 2, 4, 1, 1]]
+          var teamRecordName = ["안타", "홈런", "도루", "삼진", "병살", "실책"];
+          var teamColor = ["(8, 44, 90)", "(198, 55, 81)"]
+          var awayPlayers = [
+                              ["안권수", 2023, 50202, 5, 4, 2, 2, 0, 1, 1, "0.342", 1, "좌익수"],
+                              ["박승욱", 2024, 62802, 3, 3, 0, 1, 0, 0, 0, "0.246", 2, "2루수"],
+                              ["이학주", 2024, 69453, 2, 1, 1, 1, 0, 1, 0, "0.253", 2, "2루·유격"],
+                              ["전준우", 2024, 78513, 5, 3, 0, 1, 1, 1, 1, "0.339", 3, "지명타자"],
+                              ["안치홍", 2023, 79608, 5, 4, 1, 1, 1, 0, 2, "0.285", 4, "1루·2루"],
+                              ["유강남", 2024, 61102, 4, 3, 1, 1, 0, 1, 0, "0.275", 5, "포수"],
+                              ["지시완", 2024, 64717, 1, 1, 1, "1(1)", 3, 0, 0, "0.545", 5, "대타"],
+                              ["노진혁", 2024, 62931, 4, 3, 0, 1, 0, 0, 0, "0.232", 6, "유격수"],
+                              ["국해성", 2023, 79290, 1, 1, 0, 0, 0, 0, 0, "0.375", 6, "대타"],
+                              ["김민수", 2023, 67504, 4, 4, 0, 3, 0, 0, 0, "0.227", 7, "우익·1루"],
+                              ["한동희", 2024, 68525, 4, 4, 0, 1, 0, 0, 0, "0.289", 8, "3루수"],
+                              ["윤동희", 2024, 52591, 4, 4, 1, 2, 0, 0, 1, "0.264", 9, "중견수"]
+                            ];
+          var homePlayers = [
+                              ["홍창기", 2024, 66108],
+                              ["문성주", 2024, 68119],
+                              ["문보경", 2024, 69102],
+                              ["오스틴", 2024, 53123],
+                              ["김현수", 2024, 76290],
+                              ["오지환", 2024, 79109],
+                              ["박동원", 2024, 79365],
+                              ["박해민", 2024, 62415],
+                              ["신민재", 2024, 65207],
+                              ["이주형", 2020, 50167],
+                              ["손호영", 2023, 50150],
+                              ["허도환", 2024, 77243],
+                              ["김민성", 2023, 77564],
+                              ["송찬의", 2024, 68110]
+                            ];
+          var inns = 9;
+          gameInfos.push("gameState", "gameDate", "gameStadium");
+          gameInfo.push("경기종료", "05.29 18:30", "잠실");
+          awayInfos.push("awayTeamName", "awayTeamPitcher");
+          awayInfo.push(teamInfos[0][2], "승-김진욱");
+          homeInfos.push("homeTeamName", "homeTeamPitcher");
+          homeInfo.push(teamInfos[1][2], "패-함덕주");
+      </script>
     <div id="root">
       <div class="u_skip">
         <a href="#content">본문 바로가기</a>
@@ -349,157 +403,195 @@
       <div id="wrap">
         <div id="content" class="sticky_boundary" role="main" style="">
           <div class="Home_container__3HKK4">
-            <div class="Home_main_section__y9jR4">
-              <section class="Home_game_head__3EEZZ">
-                <h2 class="blind">경기 주요 정보</h2>
-                <div class="LivePlayer_player_wrap__2-kPW" style="display: none;">
-                  <div class="LivePlayer_container__1YIjN"></div>
-                </div>
-                <div class="MatchBox_comp_match_box__1oRmr MatchBox_type_finished__1kK4-" style="">
-                  <div class="MatchBox_info__2l4DE">
-                    <p class="MatchBox_state__2AzL_" style="">경기종료</p>
-                    <p class="MatchBox_date__1bJ9G">05.27 <span class="MatchBox_time__2z_nB">18:30</span>
-                    </p>
-                    <p class="MatchBox_stadium__17mQ4" style="">목동</p>
-                  </div>
-                  <div class="MatchBox_home__MPL6D">
-                    <div class="MatchBox_team_area__a9Jet">
-                      <div class="MatchBox_image__3CcVt">
-                        <img src="https://sports-phinf.pstatic.net/team/kbo/default/KT.png?type=f108_108" alt="" width="54" height="54">
+              <div class="Home_main_section__y9jR4">
+                  <section class="Home_game_head__3EEZZ">
+                      <h2 class="blind">경기 주요 정보</h2>
+                      <div class="LivePlayer_player_wrap__2-kPW" style="display: none;">
+                          <div class="LivePlayer_container__1YIjN"></div>
                       </div>
-                      <div class="MatchBox_text__22e-R">
-                        <em class="MatchBox_name__11AyG">KT</em>
-                        <p class="MatchBox_pitcher__2Krgp" style="">패-김재윤</p>
+                      <div class="MatchBox_comp_match_box__1oRmr MatchBox_type_finished__1kK4-" style="">
+                          <div class="MatchBox_info__2l4DE">
+                              <p class="MatchBox_state__2AzL_" style="" id="gameState"></p>
+                              <p class="MatchBox_date__1bJ9G" id="gameDate"><span class="MatchBox_time__2z_nB"></span></p>
+                              <p class="MatchBox_stadium__17mQ4" style="" id="gameStadium"></p>
+                              <script>
+                                  var arr = [];
+                                  for (var i = 0; i < gameInfos.length; i++) {
+                                    var a = document.getElementById(gameInfos[i]);
+                                    arr.push(a);
+                                  }
+                                  for (var i = 0; i < gameInfo.length; i++) {
+                                    arr[i].innerText = gameInfo[i];
+                                  }
+                                  arr = [];
+                              </script>
+                          </div>
+                          <div class="MatchBox_home__MPL6D">
+                              <div class="MatchBox_team_area__a9Jet">
+                                  <div class="MatchBox_image__3CcVt" id="awayTeamImage">
+                                      <script type="text/javascript">
+                                          var t = "";
+                                          t += '<img src="' + "https://statiz.sporki.com/data/team/ci/" + teamInfos[0][0] + "/" + teamInfos[0][1] + ".svg" + '" width="54" height="54">';
+                                          var a = document.getElementById('awayTeamImage');
+                                          a.innerHTML = t;
+                                      </script>
+                                  </div>
+                                  <div class="MatchBox_text__22e-R"><em class="MatchBox_name__11AyG" id="awayTeamName"></em>
+                                      <p class="MatchBox_pitcher__2Krgp" style="" id="awayTeamPitcher"></p>
+                                  </div>
+                                  <script>
+                                      for (var i = 0; i < awayInfos.length; i++) {
+                                        var a = document.getElementById(awayInfos[i]);
+                                        arr.push(a);
+                                      }
+                                      for (var i = 0; i < awayInfo.length; i++) {
+                                        arr[i].innerText = awayInfo[i];
+                                      }
+                                      arr = [];
+                                  </script>
+                              </div>
+                              <div class="MatchBox_score_area__2bf1P"><strong class="MatchBox_score__33SVc" id="awayTeamScore"><span class="blind">점수</span></strong></div>
+                          </div>
+                          <div class="MatchBox_away__1rDsC">
+                              <div class="MatchBox_team_area__a9Jet">
+                                  <div class="MatchBox_image__3CcVt" id="homeTeamImage">
+                                      <script type="text/javascript">
+                                          var t = "";
+                                          t += '<img src="' + "https://statiz.sporki.com/data/team/ci/" + teamInfos[1][0] + "/" + teamInfos[1][1] + ".svg" + '" width="54" height="54">';
+                                          var a = document.getElementById('homeTeamImage');
+                                          a.innerHTML = t;
+                                      </script></div>
+                                  <div class="MatchBox_text__22e-R"><em class="MatchBox_name__11AyG" id="homeTeamName"><i class="MatchBox_badge__p5jYW">홈</i></em>
+                                      <p class="MatchBox_pitcher__2Krgp" style="" id="homeTeamPitcher"></p>
+                                  </div>
+                                  <script>
+                                      for (var i = 0; i < homeInfos.length; i++) {
+                                        var a = document.getElementById(homeInfos[i]);
+                                        arr.push(a);
+                                      }
+                                      for (var i = 0; i < homeInfo.length; i++) {
+                                        arr[i].innerText = homeInfo[i];
+                                      }
+                                      arr = [];
+                                  </script>
+                              </div>
+                              <div class="MatchBox_score_area__2bf1P"><strong class="MatchBox_score__33SVc" id="homeTeamScore"><span class="blind">점수</span></strong></div>
+                          </div>
+                          <script>
+                              var gameScore = [0, 0];
+                              for (var i = 0; i < awayScore.length; i++) {
+                                  if (awayScore[i] != "-") {
+                                      gameScore[0] += Number(awayScore[i]);
+                                  } else {
+                                      continue;
+                                  }
+                              }
+                              for (var i = 0; i < homeScore.length; i++) {
+                                  if (homeScore[i] != "-") {
+                                      gameScore[1] += Number(homeScore[i]);
+                                  } else {
+                                      continue;
+                                  }
+                              }
+                              var a = document.getElementById("awayTeamScore");
+                              a.innerText = gameScore[0];
+                              a = document.getElementById("homeTeamScore");
+                              a.innerText = gameScore[1];
+                          </script>
                       </div>
-                    </div>
-                    <div class="MatchBox_score_area__2bf1P">
-                      <strong class="MatchBox_score__33SVc">
-                        <span class="blind">점수</span>4 </strong>
-                    </div>
-                  </div>
-                  <div class="MatchBox_away__1rDsC">
-                    <div class="MatchBox_team_area__a9Jet">
-                      <div class="MatchBox_image__3CcVt">
-                        <img src="https://i.namu.wiki/i/tHRSUlrIFRhIMJgT_I1ZjitNaI4b1VrVhFbU2_zNA6gWC45fKvvtvgU5vTzgOrzp0lnpLdCP5jLy6g3TRS4YHSKenggn0St7bLXGI-gwUW13NlGATv2tw_2nOBVbvSkfbQMmpQl94QnuEExC68WptQ.svg" alt="" width="54" height="54">
+                      <div class="ScoreBox_comp_score_box__1jaYr" style="">
+                          <div class="ScoreBox_score_board__2hY8- ScoreBox_type_table__2T476 ScoreBox_type_baseball__38_92">
+                              <div class="ScoreBox_title__2jVlJ" aria-hidden="true">
+                                  <div class="ScoreBox_team__2gH5O" style="">팀명</div>
+                                  <div class="ScoreBox_home__2uCuR" id="awayTeamNameSBoard"></div>
+                                  <div class="ScoreBox_away__26sht" id="homeTeamNameSBoard"></div>
+                                  <script>
+                                      var arr = [];
+                                      arr.push(document.getElementById("awayTeamNameSBoard"));
+                                      arr.push(document.getElementById("homeTeamNameSBoard"));
+                                      arr[0].innerText = awayInfo[0];
+                                      arr[1].innerText = homeInfo[0];
+                                  </script>
+                              </div>
+                              <div class="ScoreBox_round__1sOLq">
+                                  <table class="ScoreBox_board_table__3V6uh">
+                                      <caption class="blind">스코어보드 경기현황</caption>
+                                      <thead>
+                                          <tr id = "gameSBoardGeneral">
+                                              <script type="text/javascript">
+                                                  var a = document.getElementById("gameSBoardGeneral");
+                                                  var t = '<th scope="col"><span class="blind">팀명</span></th>';
+                                                  for (var i = 0; i < inns; i++) {
+                                                      t += '<th scope="col" class="" style=""><span>' + Number(i + 1) + '</span></th>';
+                                                  }
+                                                  a.innerHTML = t;
+                                              </script>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr id = "awayTeamSBoard">
+                                              <script>
+                                                  var a = document.getElementById("awayTeamSBoard");
+                                                  var t = "<th scope='row'><span class='blind'>" + awayInfo[0] + "</span></th>";
+                                                  for (var i = 0; i < awayScore.length; i++) {
+                                                      t += "<td>" + awayScore[i] + "</td>";
+                                                  }
+                                                  a.innerHTML = t;
+                                              </script>
+                                          </tr>
+                                          <tr id = "homeTeamSBoard">
+                                              <script>
+                                                  var a = document.getElementById("homeTeamSBoard");
+                                                  var t = "<th scope='row'><span class='blind'>" + homeInfo[0] + "</span></th>";
+                                                  for (var i = 0; i < homeScore.length; i++) {
+                                                      t += "<td>" + homeScore[i] + "</td>";
+                                                  }
+                                                  a.innerHTML = t;
+                                              </script>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                              <div class="ScoreBox_result__3atD0" style="">
+                                  <table class="ScoreBox_board_table__3V6uh">
+                                      <caption class="blind">스코어보드 종합</caption>
+                                      <thead>
+                                          <tr>
+                                              <th scope="col">R</th>
+                                              <th scope="col">H</th>
+                                              <th scope="col">E</th>
+                                              <th scope="col">B</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr id="awayTeamScoreMisc">
+                                              <script type="text/javascript">
+                                                  var t = "";
+                                                  t += '<td>' + gameScore[0] + '</td>';
+                                                  for (var i = 0; i < awayTeamScoreMisc.length; i++) {
+                                                      t += '<td>' + awayTeamScoreMisc[i] + '</td>';
+                                                  }
+                                                  var a = document.getElementById('awayTeamScoreMisc');
+                                                  a.innerHTML = t;
+                                              </script>
+                                          </tr>
+                                          <tr id="homeTeamScoreMisc">
+                                              <script type="text/javascript">
+                                                  var t = "";
+                                                  t += '<td>' + gameScore[1] + '</td>';
+                                                  for (var i = 0; i < homeTeamScoreMisc.length; i++) {
+                                                      t += '<td>' + homeTeamScoreMisc[i] + '</td>';
+                                                  }
+                                                  var a = document.getElementById('homeTeamScoreMisc');
+                                                  a.innerHTML = t;
+                                              </script>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
                       </div>
-                      <div class="MatchBox_text__22e-R">
-                        <em class="MatchBox_name__11AyG">
-                          <i class="MatchBox_badge__p5jYW" style="">홈</i>넥센 </em>
-                        <p class="MatchBox_pitcher__2Krgp" style="">승-이영준</p>
-                      </div>
-                    </div>
-                    <div class="MatchBox_score_area__2bf1P">
-                      <strong class="MatchBox_score__33SVc">
-                        <span class="blind">점수</span>7 </strong>
-                    </div>
-                  </div>
-                </div>
-                <div class="ScoreBox_comp_score_box__1jaYr" style="">
-                  <div class="ScoreBox_score_board__2hY8- ScoreBox_type_table__2T476 ScoreBox_type_baseball__38_92">
-                    <div class="ScoreBox_title__2jVlJ" aria-hidden="true">
-                      <div class="ScoreBox_team__2gH5O" style="">팀명</div>
-                      <div class="ScoreBox_home__2uCuR">KT</div>
-                      <div class="ScoreBox_away__26sht">넥센</div>
-                    </div>
-                    <div class="ScoreBox_round__1sOLq">
-                      <table class="ScoreBox_board_table__3V6uh">
-                        <caption class="blind">스코어보드 경기현황</caption>
-                        <thead>
-                          <tr>
-                            <th scope="col">
-                              <span class="blind">팀명</span>
-                            </th>
-                            <th scope="col" class="" style="">
-                              <span>1</span>
-                            </th>
-                            <th scope="col" class="" style="">
-                              <span>2</span>
-                            </th>
-                            <th scope="col" class="" style="">
-                              <span>3</span>
-                            </th>
-                            <th scope="col" class="" style="">
-                              <span>4</span>
-                            </th>
-                            <th scope="col" class="" style="">
-                              <span>5</span>
-                            </th>
-                            <th scope="col" class="" style="">
-                              <span>6</span>
-                            </th>
-                            <th scope="col" class="" style="">
-                              <span>7</span>
-                            </th>
-                            <th scope="col" class="" style="">
-                              <span>8</span>
-                            </th>
-                            <th scope="col" class="" style="">
-                              <span>9</span>
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">
-                              <span class="blind">KIA</span>
-                            </th>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>4</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <span class="blind">SSG</span>
-                            </th>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>4</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="ScoreBox_result__3atD0" style="">
-                      <table class="ScoreBox_board_table__3V6uh">
-                        <caption class="blind">스코어보드 종합</caption>
-                        <thead>
-                          <tr>
-                            <th scope="col">R</th>
-                            <th scope="col">H</th>
-                            <th scope="col">E</th>
-                            <th scope="col">B</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>5</td>
-                            <td>8</td>
-                            <td>1</td>
-                            <td>6</td>
-                          </tr>
-                          <tr>
-                            <td>7</td>
-                            <td>12</td>
-                            <td>0</td>
-                            <td>3</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </section>
+                  </section>
               <section class="Home_game_panel__97L_8">
                 <h2 class="blind">경기 상세 정보</h2>
                   <div class="Home_game_contents__35IMT">
@@ -509,101 +601,42 @@
                         <h4 class="blind">투수 기록</h4>
                         <div class="PitcherList_pitcher_list__3o77F">
                           <div class="eg-flick-viewport" style="position: relative; z-index: 0; overflow: visible; min-height: 5%; width: 100%; touch-action: pan-y; user-select: none; -webkit-user-drag: none; height: 61px;">
-                            <ul class="eg-flick-camera" style="width: 100%; height: 100%; will-change: transform; transform: translate3d(147px, 0px, 0px);">
-                              <li class="PitcherList_pitcher_area__2By9l eg-flick-panel" style="position: absolute; left: 0px;">
-                                <div class="PitcherList_profile_area__2PjD2">
-                                  <img src="https://sports-phinf.pstatic.net/player/kbo/default/52720.png?type=f136_148" alt="" width="62" height="69">
-                                  <em class="PitcherList_record__3Mq7t PitcherList_type_win__wn2dT">승리</em>
-                                  <a href="/player/index?category=kbo&amp;playerId=52720&amp;tab=record" class="PitcherList_link__3qFH1">
-                                    <span class="blind">선수 페이지</span>
-                                  </a>
-                                </div>
-                                <div class="PitcherList_info_area__arMmA">
-                                  <a href="/player/index?category=kbo&amp;playerId=52720&amp;tab=record" class="PitcherList_pitcher_name__2T3E-">페냐</a>
-                                  <dl class="PitcherList_statistics__By6yF">
-                                    <div class="PitcherList_item__LM17j">
-                                      <dt class="PitcherList_name__ERsYA">이닝</dt>
-                                      <dd class="PitcherList_value__3TMBM">5</dd>
-                                    </div>
-                                    <div class="PitcherList_item__LM17j">
-                                      <dt class="PitcherList_name__ERsYA">피안타</dt>
-                                      <dd class="PitcherList_value__3TMBM">3</dd>
-                                    </div>
-                                    <div class="PitcherList_item__LM17j">
-                                      <dt class="PitcherList_name__ERsYA">자책</dt>
-                                      <dd class="PitcherList_value__3TMBM">2</dd>
-                                    </div>
-                                  </dl>
-                                </div>
-                              </li>
-                              <li class="PitcherList_pitcher_area__2By9l eg-flick-panel" style="position: absolute; left: 142px;">
-                                <div class="PitcherList_profile_area__2PjD2">
-                                  <img src="https://sports-phinf.pstatic.net/player/kbo/default/65056.png?type=f136_148" alt="" width="62" height="69">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="46" height="52" viewBox="0 0 46 52" class="PitcherList_icon_empty_player__1dgNo" aria-hidden="true">
-                                    <path d="M30.58 39.462c-1.245-.82-1.814-2.707-1.82-4.544.002-.028.013-.066.013-.094.027-.886.189-1.479.587-2.274.393-.955 1.312-2.205 1.843-3.099.47-.72.955-2.063 1.378-3.435 1.142-.186 1.769-1.697 2.096-3.126.267-1.142.166-2.795-1.014-3.334V15.37c0-1.64-.49-3.313-1.355-4.711a9.12 9.12 0 00-2.434-2.638c-.012-.013-.039-.022-.053-.033l.235-1.264c.077-.398-.197-.725-.613-.725h-6.439c-2.95 0-5.206.806-6.866 2.022a9.143 9.143 0 00-2.433 2.638c-.863 1.398-1.355 3.071-1.355 4.71v4.186c-1.183.54-1.28 2.192-1.02 3.334.33 1.429.959 2.94 2.098 3.126.422 1.372.913 2.716 1.38 3.435.531.894 1.455 2.144 1.843 3.099.4.795.556 1.388.59 2.274 0 1.864-.555 3.805-1.822 4.638-1.28.838-12.849 7.705-12.849 7.705C1.155 48.01 0 50.025 0 51.651l.306 7.873C.344 60.334 1.05 61 1.877 61h42.246c.824 0 1.533-.666 1.567-1.476L46 51.65c0-1.626-1.16-3.642-2.574-4.484 0 0-11.564-6.867-12.846-7.705z" fill="#CED7DA"></path>
-                                  </svg>
-                                  <em class="PitcherList_record__3Mq7t PitcherList_type_lose__18lzr">패전</em>
-                                  <a href="/player/index?category=kbo&amp;playerId=65056&amp;tab=record" class="PitcherList_link__3qFH1">
-                                    <span class="blind">선수 페이지</span>
-                                  </a>
-                                </div>
-                                <div class="PitcherList_info_area__arMmA">
-                                  <a href="/player/index?category=kbo&amp;playerId=65056&amp;tab=record" class="PitcherList_pitcher_name__2T3E-">엄상백</a>
-                                  <dl class="PitcherList_statistics__By6yF">
-                                    <div class="PitcherList_item__LM17j">
-                                      <dt class="PitcherList_name__ERsYA">이닝</dt>
-                                      <dd class="PitcherList_value__3TMBM">3</dd>
-                                    </div>
-                                    <div class="PitcherList_item__LM17j">
-                                      <dt class="PitcherList_name__ERsYA">피안타</dt>
-                                      <dd class="PitcherList_value__3TMBM">4</dd>
-                                    </div>
-                                    <div class="PitcherList_item__LM17j">
-                                      <dt class="PitcherList_name__ERsYA">자책</dt>
-                                      <dd class="PitcherList_value__3TMBM">4</dd>
-                                    </div>
-                                  </dl>
-                                </div>
-                              </li>
-                              <li class="PitcherList_pitcher_area__2By9l eg-flick-panel" style="position: absolute; left: 284px;">
-                                <div class="PitcherList_profile_area__2PjD2">
-                                  <img src="https://sports-phinf.pstatic.net/player/kbo/default/65707.png?type=f136_148" alt="" width="62" height="69">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="46" height="52" viewBox="0 0 46 52" class="PitcherList_icon_empty_player__1dgNo" aria-hidden="true">
-                                    <path d="M30.58 39.462c-1.245-.82-1.814-2.707-1.82-4.544.002-.028.013-.066.013-.094.027-.886.189-1.479.587-2.274.393-.955 1.312-2.205 1.843-3.099.47-.72.955-2.063 1.378-3.435 1.142-.186 1.769-1.697 2.096-3.126.267-1.142.166-2.795-1.014-3.334V15.37c0-1.64-.49-3.313-1.355-4.711a9.12 9.12 0 00-2.434-2.638c-.012-.013-.039-.022-.053-.033l.235-1.264c.077-.398-.197-.725-.613-.725h-6.439c-2.95 0-5.206.806-6.866 2.022a9.143 9.143 0 00-2.433 2.638c-.863 1.398-1.355 3.071-1.355 4.71v4.186c-1.183.54-1.28 2.192-1.02 3.334.33 1.429.959 2.94 2.098 3.126.422 1.372.913 2.716 1.38 3.435.531.894 1.455 2.144 1.843 3.099.4.795.556 1.388.59 2.274 0 1.864-.555 3.805-1.822 4.638-1.28.838-12.849 7.705-12.849 7.705C1.155 48.01 0 50.025 0 51.651l.306 7.873C.344 60.334 1.05 61 1.877 61h42.246c.824 0 1.533-.666 1.567-1.476L46 51.65c0-1.626-1.16-3.642-2.574-4.484 0 0-11.564-6.867-12.846-7.705z" fill="#CED7DA"></path>
-                                  </svg>
-                                  <em class="PitcherList_record__3Mq7t">홀드</em>
-                                  <a href="/player/index?category=kbo&amp;playerId=65707&amp;tab=record" class="PitcherList_link__3qFH1">
-                                    <span class="blind">선수 페이지</span>
-                                  </a>
-                                </div>
-                                <div class="PitcherList_info_area__arMmA">
-                                  <a href="/player/index?category=kbo&amp;playerId=65707&amp;tab=record" class="PitcherList_pitcher_name__2T3E-">주현상</a>
-                                  <dl class="PitcherList_statistics__By6yF">
-                                    <div class="PitcherList_item__LM17j">
-                                      <dt class="PitcherList_name__ERsYA">이닝</dt>
-                                      <dd class="PitcherList_value__3TMBM">1 ⅔</dd>
-                                    </div>
-                                    <div class="PitcherList_item__LM17j">
-                                      <dt class="PitcherList_name__ERsYA">피안타</dt>
-                                      <dd class="PitcherList_value__3TMBM">2</dd>
-                                    </div>
-                                    <div class="PitcherList_item__LM17j">
-                                      <dt class="PitcherList_name__ERsYA">자책</dt>
-                                      <dd class="PitcherList_value__3TMBM">0</dd>
-                                    </div>
-                                  </dl>
-                                </div>
-                              </li>
+                            <ul class="eg-flick-camera" style="width: 100%; height: 100%; will-change: transform; transform: translate3d(147px, 0px, 0px);" id="pitcherEntry">
+                              <script>
+                                t = "";
+                                var pEntryPos = [];
+                                if (pEntry.length == 2) {
+                                  pEntryPos.push(100);
+                                  pEntryPos.push(300);
+                                }
+                                else if (pEntry.length == 3) {
+                                  pEntryPos.push(0);
+                                  pEntryPos.push(200);
+                                  pEntryPos.push(400);
+                                }
+                                for (var i = 0; i < pEntry.length; i++) {
+                                  t += '<li class="PitcherList_pitcher_area__2By9l eg-flick-panel" style="position: absolute; left: ' + String(pEntryPos[i]) + 'px;"><div class="PitcherList_profile_area__2PjD2"><img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/person/middle/' + String(pEntry[i][1]) + '/' + String(pEntry[i][2]) + '.jpg" alt="" width="62" height="69">';
+                                  if (pEntry[i][6] == "승리") t += '<em class="PitcherList_record__3Mq7t PitcherList_type_win__wn2dT">승리</em';
+                                  else if (pEntry[i][6] == "패전") t += '<em class="PitcherList_record__3Mq7t PitcherList_type_lose__18lzr">패전</em>';
+                                  else if (pEntry[i][6] == "세이브") t += '<em class="PitcherList_record__3Mq7t">세이브</em>';
+                                  t += '<a href="https://www.koreabaseball.com/Record/Player/PitcherDetail/Basic.aspx?playerId=' + String(pEntry[i][2]) + '" class="PitcherList_link__3qFH1"><span class="blind">선수 페이지</span></a></div><div class="PitcherList_info_area__arMmA"><a href="https://www.koreabaseball.com/Record/Player/PitcherDetail/Basic.aspx?playerId=' + String(pEntry[i][2]) + '" class="PitcherList_pitcher_name__2T3E-">' + String(pEntry[i][0]) + '</a><dl class="PitcherList_statistics__By6yF"><div class="PitcherList_item__LM17j"><dt class="PitcherList_name__ERsYA">이닝</dt><dd class="PitcherList_value__3TMBM">' + String(pEntry[i][3]) + '</dd></div><div class="PitcherList_item__LM17j"><dt class="PitcherList_name__ERsYA">피안타</dt><dd class="PitcherList_value__3TMBM">' + String(pEntry[i][4]) + '</dd></div><div class="PitcherList_item__LM17j"><dt class="PitcherList_name__ERsYA">자책</dt><dd class="PitcherList_value__3TMBM">' + String(pEntry[i][5]) + '</dd></div></dl></div></li>';
+                                }
+                                var a = document.getElementById('pitcherEntry');
+                                a.innerHTML = t;
+                              </script>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="TeamVS_comp_team_vs__fpu3N">
                         <h4 class="blind">팀 기록</h4>
-                        <div class="TeamVS_title_area__14_Ho">
-                          <strong class="TeamVS_away_team__1Mlhl">KT</strong>
-                          <span class="TeamVS_vs__1hnCm">VS</span>
-                          <strong class="TeamVS_home_team__2Twl4">한화</strong>
+                        <div class="TeamVS_title_area__14_Ho" id="teamNameEntry">
+                          <script>
+                            var t = "";
+                            t += '<strong class="TeamVS_away_team__1Mlhl">' + teamInfos[0][2] + '</strong><span class="TeamVS_vs__1hnCm">VS</span><strong class="TeamVS_home_team__2Twl4">' + teamInfos[1][2] + '</strong>';
+                            var a = document.getElementById('teamNameEntry');
+                            a.innerHTML = t;
+                          </script>
                         </div>
                         <div class="TeamVS_detail_area__1Owqz">
                           <table class="TeamVS_power_info_table__2I4zy">
@@ -628,121 +661,15 @@
                                 </th>
                               </tr>
                             </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">10</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ" style="width: 63%; color: rgb(35, 31, 32);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                                <th scope="row">안타</th>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">12</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ" style="width: 75%; color: rgb(237, 124, 61);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">2</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ" style="width: 13%; color: rgb(35, 31, 32);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                                <th scope="row">홈런</th>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">2</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ" style="width: 13%; color: rgb(237, 124, 61);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">0</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ TeamVS_type_zero__2S747" style="width: 0%; color: rgb(35, 31, 32);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                                <th scope="row">도루</th>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">0</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ TeamVS_type_zero__2S747" style="width: 0%; color: rgb(237, 124, 61);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">10</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ" style="width: 63%; color: rgb(35, 31, 32);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                                <th scope="row">삼진</th>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">5</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ" style="width: 31%; color: rgb(237, 124, 61);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">1</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ" style="width: 6%; color: rgb(35, 31, 32);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                                <th scope="row">병살</th>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">1</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ" style="width: 6%; color: rgb(237, 124, 61);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">2</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ" style="width: 13%; color: rgb(35, 31, 32);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                                <th scope="row">실책</th>
-                                <td>
-                                  <div class="TeamVS_score_area__LSilq">
-                                    <div class="TeamVS_score__2Iv0U">0</div>
-                                    <div class="TeamVS_chart__2SHSH">
-                                      <span class="TeamVS_current__1nSRQ TeamVS_type_zero__2S747" style="width: 0%; color: rgb(237, 124, 61);"></span>
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr>
+                            <tbody id="teamRecordEntry">
+                              <script>
+                              var t = "";
+                                for (var i = 0; i < 6; i++) {
+                                  t += '<tr><td><div class="TeamVS_score_area__LSilq"><div class="TeamVS_score__2Iv0U">' + String(teamRecord[0][i]) + '</div><div class="TeamVS_chart__2SHSH"><span class="TeamVS_current__1nSRQ" style="width: ' + String(Number((teamRecord[0][i]/16) * 100)) + '%; color: rgb' + String(teamColor[0]) + ';"></span></div></div></td><th scope="row">' + String(teamRecordName[i]) + '</th><td><div class="TeamVS_score_area__LSilq"><div class="TeamVS_score__2Iv0U">' + String(teamRecord[1][i]) + '</div><div class="TeamVS_chart__2SHSH"><span class="TeamVS_current__1nSRQ" style="width: ' + String(Number((teamRecord[1][i]/16) * 100)) + '%; color: rgb' + teamColor[1] + ';"></span></div></div></td></tr>';
+                                }
+                                var a = document.getElementById('teamRecordEntry');
+                                a.innerHTML = t;
+                              </script>
                             </tbody>
                           </table>
                         </div>
@@ -843,22 +770,8 @@
                         <div role="tabpanel" class="PlayerRecord_tabpanel__3GYt9">
                           <div class="PlayerRecord_table_area__1fIBC">
                             <div class="PlayerRecord_player_list_area__gbho3" aria-hidden="true">
-                              <span class="PlayerRecord_title__2r9C8">타자명</span>
                               <ul class="PlayerRecord_player_list__2-BCl PlayerRecord_type_batter__1rHnm">
                                 <li class="PlayerRecord_player_item__3ECIB">
-                                  <a href="/player/index?category=kbo&amp;tab=record&amp;from=sports&amp;playerId=53764" class="PlayerRecord_player_info__3-1gO">
-                                    <span class="PlayerRecord_bat_order__2gZ-S">1 <span class="blind">번 타자</span>
-                                    </span>
-                                    <span class="PlayerRecord_name__1W_c0">문현빈</span>
-                                    <span class="PlayerRecord_position__3SBbd">2루수</span>
-                                  </a>
-                                </li>
-                                <li class="PlayerRecord_player_item__3ECIB PlayerRecord_type_sum__bKbUH">합계</li>
-                              </ul>
-                            </div>
-                            <div class="PlayerRecord_scroll_area__2KZOU">
-                              <div>
-                                <div>
                                   <table class="PlayerRecord_record_table__19F6_ PlayerRecord_type_batter__1rHnm">
                                     <caption>
                                       <span class="blind">한화 타자 기록</span>
@@ -867,6 +780,10 @@
                                       <tr>
                                         <th scope="col">
                                           <span class="info">타자명</span>
+                                        </th>
+                                        <th scope="col" class="">
+                                          <button type="button" aria-pressed="false" class="PlayerRecord_button_sort__2r_rb">타석 <span class="blind">내림차순 정렬</span>
+                                          </button>
                                         </th>
                                         <th scope="col" class="">
                                           <button type="button" aria-pressed="false" class="PlayerRecord_button_sort__2r_rb">타수 <span class="blind">내림차순 정렬</span>
@@ -885,11 +802,7 @@
                                           </button>
                                         </th>
                                         <th scope="col" class="">
-                                          <button type="button" aria-pressed="false" class="PlayerRecord_button_sort__2r_rb">홈런 <span class="blind">내림차순 정렬</span>
-                                          </button>
-                                        </th>
-                                        <th scope="col" class="">
-                                          <button type="button" aria-pressed="false" class="PlayerRecord_button_sort__2r_rb">볼넷 <span class="blind">내림차순 정렬</span>
+                                          <button type="button" aria-pressed="false" class="PlayerRecord_button_sort__2r_rb">4사구 <span class="blind">내림차순 정렬</span>
                                           </button>
                                         </th>
                                         <th scope="col" class="">
@@ -902,14 +815,26 @@
                                         </th>
                                       </tr>
                                     </thead>
-                                    <tbody>
-                                      <tr>
-                                        <th scope="row">
+                                    <tbody id = "awayTeamRecord">
+                                        <script>
+                                        var t = "";
+                                          for (var i = 0; i < awayPlayers.length; i++) {
+                                            t += '<tr><th scope="row"><a href="https://www.koreabaseball.com/Record/Player/HitterDetail/Basic.aspx?playerId=' + String(awayPlayers[i][2]) + '" class="PlayerRecord_player_info__3-1gO"><span class="PlayerRecord_bat_order__2gZ-S">' + String(awayPlayers[i][11]) + '<span class="blind">번 타자</span></span><span class="PlayerRecord_name__1W_c0">' + String(awayPlayers[i][0]) + '</span><span class="PlayerRecord_position__3SBbd">' + String(awayPlayers[i][12]) + '</span></a></th>';
+                                            for (var j = 3; j < 11; j++) {
+                                              t += '<td class=""><span>' + String(awayPlayers[i][j]) + '</span></td>';
+                                            }
+                                            t += "</tr>";
+                                          }
+                                          var a = document.getElementById('awayTeamRecord');
+                                          a.innerHTML = t;
+                                        </script>
+                                        <!--<th scope="row">
                                           <a href="/player/index?category=kbo&amp;tab=record&amp;from=sports&amp;playerId=53764" class="PlayerRecord_player_info__3-1gO">
                                             <span class="PlayerRecord_bat_order__2gZ-S">1 <span class="blind">번 타자</span>
                                             </span>
                                             <span class="PlayerRecord_name__1W_c0">문현빈</span>
                                             <span class="PlayerRecord_position__3SBbd">2루수</span>
+                                            <img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/person/middle/2023/53764.jpg" width="60" height="80"/>
                                           </a>
                                         </th>
                                         <td class="">
@@ -936,38 +861,11 @@
                                         <td class="col_hra">
                                           <span>0.238</span>
                                         </td>
-                                      </tr>
-                                      <tr class="PlayerRecord_type_sum__bKbUH">
-                                        <th scope="row">합계</th>
-                                        <td class="">
-                                          <span>32</span>
-                                        </td>
-                                        <td class="">
-                                          <span>8</span>
-                                        </td>
-                                        <td class="">
-                                          <span>12</span>
-                                        </td>
-                                        <td class="">
-                                          <span>8</span>
-                                        </td>
-                                        <td class="">
-                                          <span>2</span>
-                                        </td>
-                                        <td class="">
-                                          <span>5</span>
-                                        </td>
-                                        <td class="">
-                                          <span>5</span>
-                                        </td>
-                                        <td class="col_hra">
-                                          <span></span>
-                                        </td>
-                                      </tr>
+                                      </tr>-->
                                     </tbody>
                                   </table>
-                                </div>
-                              </div>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                           <div class="PlayerRecord_table_area__1fIBC">
