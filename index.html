@@ -55,69 +55,16 @@
       <option value="9">두산</option>
       <option value="10">한화</option>
     </select>
+    <select id="monthSelect" name="monthSelect" onchange="updateScheduleInfo()">
+      <option value="all">전체</option>
+      <option value="3">3월</option>
+      <option value="4">4월</option>
+      <option value="5">5월</option>
+      <option value="6">6월</option>
+    </select>
 		<table cellspacing="0" border="1" id="scheduleEntry">
-        <script src="js/scheduleEntry.js"></script>
-        <script src="js/scheduleLogic.js"></script>
-  			<!--<td rowspan="5">
-  				<strong>3.31</strong>(목)
-  			</td>
-        <tr>
-          <td width = 100>승 - 구승민</td>
-          <td><img src = "https://sports-phinf.pstatic.net/team/kbo/default/LT.png?type=f64_64" width = "50" height = "50"></img></td>
-          <td bgcolor = #111D40><p style="color:white;">4 : <b>3</b><br>경기종료</p></td>
-          <td><img src = "https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/emblem/regular/2020/emblem_SK.png" width = "60" height = "40"></img></td>
-          <td width = 100>패 - 서진용</td>
-          <td>
-						<a href="game/20230331LTSK/preview.html" onclick="clickcr(this, 'sch.gamerecord', '', '', event);"><img width="61" height="23" alt="경기결과" src="https://ssl.pstatic.net/static/sports/2021/pc/04/08/btn_power.gif"></a>
-						<a href="game/20230331LTSK/relay.html" onclick="clickcr(this, 'sch.gamerecord', '', '', event);"><img width="61" height="23" alt="경기결과" src="https://imgnews.pstatic.net/image/sports/2011/baseball_schedule/btn_result2.gif"></a>
-						<a href="game/20230331LTSK/video.html" onclick="clickcr(this, 'sch.gamevod', '', '', event);"><img width="61" height="23" alt="경기영상" src="https://imgnews.pstatic.net/image/sports/2010/kbo_schedule/btn_vod2.gif"></a>
-					</td>
-    			<td>
-    				<span class="td_stadium">문학</span>
-    			</td>
-  		  </tr>
-    		<tr>
-          <td width = 100>승 - 안우진</td>
-          <td><img src = "https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/emblem/regular/2018/emblem_WO.png" width = "70" height = "50"></img></td>
-          <td bgcolor = #4F1516><p style="color:white;">8 : 4<br>경기종료</p></td>
-          <td><img src = "https://sports-phinf.pstatic.net/team/kbo/default/HT.png?type=f64_64" width = "50" height = "50"></img></td>
-          <td width = 100>패 - 앤더슨</td>
-          <td>
-						<a href="game/20230331WOHT/preview.html" onclick="clickcr(this, 'sch.gamerecord', '', '', event);"><img width="61" height="23" alt="경기결과" src="https://ssl.pstatic.net/static/sports/2021/pc/04/08/btn_power.gif"></a>
-						<a href="game/20230331WOHT/relay.html" onclick="clickcr(this, 'sch.gamerecord', '', '', event);"><img width="61" height="23" alt="경기결과" src="https://imgnews.pstatic.net/image/sports/2011/baseball_schedule/btn_result2.gif"></a>
-						<a href="game/20230331WOHT/video.html" onclick="clickcr(this, 'sch.gamevod', '', '', event);"><img width="61" height="23" alt="경기영상" src="https://imgnews.pstatic.net/image/sports/2010/kbo_schedule/btn_vod2.gif"></a>
-					</td>
-    			<td>
-      				<span class="td_stadium">광주</span>
-    			</td>
-    		</tr>
-    		<tr>
-          <td width = 100>승 - 뷰캐넌</td>
-          <td><img src = "https://sports-phinf.pstatic.net/team/kbo/default/SS.png?type=f64_64" width = "50" height = "50"></img></td>
-          <td bgcolor = #204A9B><p style="color:white;">5 : 2<br>경기종료</p></td>
-          <td><img src = "https://sports-phinf.pstatic.net/team/kbo/default/HH.png?type=f64_64" width = "50" height = "50"></img></td>
-          <td width = 100>패 - 스미스</td>
-          <td>
-						<a href="game/20230331SSHH/preview.html" onclick="clickcr(this, 'sch.gamerecord', '', '', event);"><img width="61" height="23" alt="경기결과" src="https://ssl.pstatic.net/static/sports/2021/pc/04/08/btn_power.gif"></a>
-					</td>
-    			<td>
-      				<span class="td_stadium">대전</span>
-    			</td>
-    		</tr>
-    		<tr>
-          <td width = 100>승 - 켈리</td>
-          <td><img src = "https://sports-phinf.pstatic.net/team/kbo/default/LG.png?type=f64_64" width = "50" height = "50"></img></td>
-          <td bgcolor = #B32653><p style="color:white;">8 : 4<br>경기종료</p></td>
-          <td><img src = "https://sports-phinf.pstatic.net/team/kbo/default/OB.png?type=f64_64" width = "50" height = "50"></img></td>
-          <td width = 100>패 - 알칸타라</td>
-          <td>
-						<a href="game/20230331LGOB/preview.html" onclick="clickcr(this, 'sch.gamerecord', '', '', event);"><img width="61" height="23" alt="경기결과" src="https://ssl.pstatic.net/static/sports/2021/pc/04/08/btn_power.gif"></a>
-					</td>
-    			<td>
-      				<span class="td_stadium">잠실</span>
-    			</td>
-    		</tr>-->
-  		</tbody>
+      <script src="js/scheduleEntry.js"></script>
+      <script src="js/scheduleLogic.js"></script>
 	  </table>
   </body>
 </html>

@@ -1,8 +1,10 @@
 var cursor = document.getElementById('scheduleEntry');
 var teamSelectCursor = document.getElementById('teamSelect');
+var monSelectCursor = document.getElementById('monthSelect');
 var teamValue = teamSelectCursor.value;
+var monthVal = monSelectCursor.value;
 
-function printScheduleInfo() {
+let printScheduleInfo = () => {
     var t = '<colgroup><col width="107"><col width="150"><col width="125"><col width="75"><col width="125"><col width="150"><col width="100"><col width = "50"></colgroup><tbody>';
     for (var i = 0; i < gameData.length; i++) {
         t += '<tr><td rowspan="' + Number(gameData[i].length - 1) + '"><strong>' + gameData[i][0] + '</strong>(' + gameData[i][1] + ')</td>';
@@ -45,7 +47,7 @@ function printScheduleInfo() {
     cursor.innerHTML = t;
 }
 
-function updateScheduleInfo() {
+let updateScheduleInfo = () => {
   teamValue = teamSelectCursor.value;
   var t = '<colgroup><col width="107"><col width="150"><col width="125"><col width="75"><col width="125"><col width="150"><col width="100"><col width = "50"></colgroup><tbody>';
   for (var i = 0; i < gameData.length; i++) {
@@ -53,7 +55,6 @@ function updateScheduleInfo() {
           t += '<tr><td rowspan="' + Number(gameData[i].length - 1) + '"><strong>' + gameData[i][0] + '</strong>(' + gameData[i][1] + ')</td>';
       else
           t += '<tr><td><strong>' + gameData[i][0] + '</strong>(' + gameData[i][1] + ')</td>';
-
       for (var j = 2; j < Number(gameData[i].length); j++) {
           console.log(teamValue);
           if (Number(teamValue) != 0) {
