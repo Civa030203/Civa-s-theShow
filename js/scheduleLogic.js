@@ -34,11 +34,11 @@ let printScheduleInfo = () => {
             t += '<br>' + gameData[i][j][4] + '</p></td><td><img src = "https://statiz.sporki.com/data/team/ci/' + teamInfos[Number(gameData[i][j][1] - 1)][2] + '/' + teamInfos[Number(gameData[i][j][1] - 1)][1] + '.svg" width = "50" height = "50"></img></td><td width = 100>' + gameData[i][j][6] + '</td><td>';
 
             if (gameData[i][j][8])
-                t += '<a href="game/' + gameData[i][j][12] + '/preview.html" onclick="clickcr(this, "sch.gamerecord", "", "", event);"><img width="61" height="23" alt="경기결과" src="https://ssl.pstatic.net/static/sports/2021/pc/04/08/btn_power.gif"></a>';
+                t += '<a href="game/' + gameData[i][j][11] + '/preview.html" onclick="clickcr(this, "sch.gamerecord", "", "", event);"><img width="61" height="23" alt="경기결과" src="https://ssl.pstatic.net/static/sports/2021/pc/04/08/btn_power.gif"></a>';
             if (gameData[i][j][9])
-                t += '<a href="game/' + gameData[i][j][12] + '/relay.html" onclick="clickcr(this, "sch.gamerecord", "", "", event);"><img width="61" height="23" alt="경기결과" src="https://imgnews.pstatic.net/image/sports/2011/baseball_schedule/btn_result2.gif"></a>';
+                t += '<a href="game/' + gameData[i][j][11] + '/relay.html" onclick="clickcr(this, "sch.gamerecord", "", "", event);"><img width="61" height="23" alt="경기결과" src="https://imgnews.pstatic.net/image/sports/2011/baseball_schedule/btn_result2.gif"></a>';
             if (gameData[i][j][10])
-                t += '<a href="game/' + gameData[i][j][12] + '/video.html" onclick="clickcr(this, "sch.gamevod", "", "", event);"><img width="61" height="23" alt="경기영상" src="https://imgnews.pstatic.net/image/sports/2010/kbo_schedule/btn_vod2.gif"></a>';
+                t += '<a href="game/' + gameData[i][j][11] + '/video.html" onclick="clickcr(this, "sch.gamevod", "", "", event);"><img width="61" height="23" alt="경기영상" src="https://imgnews.pstatic.net/image/sports/2010/kbo_schedule/btn_vod2.gif"></a>';
 
             t += '</td><td><span class="td_stadium">' + gameData[i][j][7] + '</span></td></tr></tr>';
         }
@@ -83,11 +83,11 @@ let updateScheduleInfo = () => {
                   t += '<br>' + gameData[i][j][4] + '</p></td><td><img src = "https://statiz.sporki.com/data/team/ci/' + teamInfos[Number(gameData[i][j][1] - 1)][2] + '/' + teamInfos[Number(gameData[i][j][1] - 1)][1] + '.svg" width = "50" height = "50"></img></td><td width = 100>' + gameData[i][j][6] + '</td><td>';
 
                   if (gameData[i][j][8])
-                      t += '<a href="game/' + gameData[i][j][12] + '/preview.html" onclick="clickcr(this, "sch.gamerecord", "", "", event);"><img width="61" height="23" alt="경기결과" src="https://ssl.pstatic.net/static/sports/2021/pc/04/08/btn_power.gif"></a>';
+                      t += '<a href="game/' + gameData[i][j][11] + '/preview.html" onclick="clickcr(this, "sch.gamerecord", "", "", event);"><img width="61" height="23" alt="경기결과" src="https://ssl.pstatic.net/static/sports/2021/pc/04/08/btn_power.gif"></a>';
                   if (gameData[i][j][9])
-                      t += '<a href="game/' + gameData[i][j][12] + '/relay.html" onclick="clickcr(this, "sch.gamerecord", "", "", event);"><img width="61" height="23" alt="경기결과" src="https://imgnews.pstatic.net/image/sports/2011/baseball_schedule/btn_result2.gif"></a>';
+                      t += '<a href="game/' + gameData[i][j][11] + '/relay.html" onclick="clickcr(this, "sch.gamerecord", "", "", event);"><img width="61" height="23" alt="경기결과" src="https://imgnews.pstatic.net/image/sports/2011/baseball_schedule/btn_result2.gif"></a>';
                   if (gameData[i][j][10])
-                      t += '<a href="game/' + gameData[i][j][12] + '/video.html" onclick="clickcr(this, "sch.gamevod", "", "", event);"><img width="61" height="23" alt="경기영상" src="https://imgnews.pstatic.net/image/sports/2010/kbo_schedule/btn_vod2.gif"></a>';
+                      t += '<a href="game/' + gameData[i][j][11] + '/video.html" onclick="clickcr(this, "sch.gamevod", "", "", event);"><img width="61" height="23" alt="경기영상" src="https://imgnews.pstatic.net/image/sports/2010/kbo_schedule/btn_vod2.gif"></a>';
 
                   t += '</td><td><span class="td_stadium">' + gameData[i][j][7] + '</span></td></tr></tr>';
               }
