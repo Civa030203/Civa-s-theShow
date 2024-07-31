@@ -4900,10 +4900,10 @@
         var homeInfos = [];
         var homeInfo = [];
         var teamInfos = [[2024, 1001, "삼성"], [2024, 3001, "롯데"]]
-        var awayScore = ["1", "0", "-", "-", "-", "-", "-", "-", "-"];
-        var homeScore = ["1", "-", "-", "-", "-", "-", "-", "-", "-"];
-        var awayTeamScoreMisc = ["3", "0", "0"]; // H E B
-        var homeTeamScoreMisc = ["2", "0", "0"]; // H E B
+        var awayScore = ["1", "0", "0", "-", "-", "-", "-", "-", "-"];
+        var homeScore = ["1", "1", "-", "-", "-", "-", "-", "-", "-"];
+        var awayTeamScoreMisc = ["3", "0", "1"]; // H E B
+        var homeTeamScoreMisc = ["4", "0", "0"]; // H E B
         var awayPlayers = [
                             ["김지찬", 2024, 50458],
                             ["피렐라", 2023, 51463],
@@ -4928,7 +4928,7 @@
                           ];
         var inns = 9;
         gameInfos.push("gameState", "gameDate", "gameStadium");
-        gameInfo.push("2회초", "06.08 18:30", "사직");
+        gameInfo.push("3회초", "06.08 18:30", "사직");
         awayInfos.push("awayTeamName", "awayTeamPitcher");
         awayInfo.push(teamInfos[0][2], "투-황동재");
         homeInfos.push("homeTeamName", "homeTeamPitcher");
@@ -5155,19 +5155,265 @@
                                             <div class="RelayList_comp_relay_list__3tE9B">
                                                 <div class="RelayInfo_relay_info_area__Sha3f">
                                                     <div class="OffenseTitle_comp_offense_title__2qIHb">
-                                                        <div class="OffenseTitle_title_area__wtg1l"><strong class="OffenseTitle_title__1LKfI">2회초 - 삼성공격</strong></div>
+                                                        <div class="OffenseTitle_title_area__wtg1l"><strong class="OffenseTitle_title__1LKfI">3회초 - 삼성공격</strong></div>
                                                     </div>
-                                                    <div class="RelayList_comp_relay_list__3tE9B" id = "inn2top">
+                                                    <div class="RelayList_comp_relay_list__3tE9B" id = "inn3top">
                                                         <script type="text/javascript">
                                                             var batters = 1;
-                                                            var startBorder = 7;
-                                                            var endBorder = 7;
-                                                            var batterAvgs = ["타율 0.254"];
-                                                            var batterInfoValues = [[0, 0, 0, 0, 0, 0, 0, 0]];
+                                                            var startBorder = 2;
+                                                            var endBorder = 2;
+                                                            var batterAvgs = ["타율 0.380"];
+                                                            var batterInfoValues = [[1, 1, 0, 0, 0, 0, 0, 1]];
                                                             var batterInfoItems = ["타석", "타수", "안타", "득점", "타점", "홈런", "볼넷", "피삼진"];
                                                             var batterResults = [];
                                                             var batterBalls = [[]];
                                                             var runnerResults = [[]];
+
+                                                            var i = startBorder;
+                                                            var batterIds = [];
+                                                            var batterYears = [];
+                                                            var batterName = [];
+                                                            var batterOrders = [];
+                                                            for (var cnt = 0; cnt < batters; cnt++) {
+                                                                batterIds.push(awayPlayers[i - 1][2]);
+                                                                batterYears.push(awayPlayers[i - 1][1]);
+                                                                batterName.push(awayPlayers[i - 1][0]);
+                                                                batterOrders.push(i + "번타자");
+                                                                i = i - 1;
+                                                                if (i < 1)
+                                                                    i = 9;
+                                                            }
+                                                            var t = "";
+                                                            for (var i = 0; i < batters; i++) {
+                                                                t += '<div class="RelayList_player_area__2ur0q">';
+                                                                t += '<div class="RelayList_player_info__380QS">';
+                                                                t += '<div class="RelayList_image_area__2SkIi"><span class="RelayList_image__1aYtI"><img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/person/middle/' + batterYears[i] + '/' +  String(batterIds[i]) + '.jpg?type=w54" alt="" width="40" height="47"></span></div>';
+                                                                t += '<div class="RelayList_record_area__1utnx">';
+                                                                t += '<div class="RelayList_profile_info__2n-fN"><strong class="RelayList_name__1THfS">' + batterName[i] + '</strong><span class="RelayList_position__M6m4z">' + batterOrders[i] + '</span><em class="RelayList_average__GnAvE">' + batterAvgs[i] + '</em></div>';
+                                                                t += '<div class="RelayList_sub_info_wrap__m4KuK">';
+                                                                t += '<dl class="RelayList_sub_info__KV9-f">';
+                                                                for (var j = 0; j < 8; j++) {
+                                                                    t += '<div class="RelayList_sub_info_item__LPE8f">';
+                                                                    t += '<dt class="RelayList_kind__2m12U">' + batterInfoItems[j] + '</dt>';
+                                                                    t += '<dd class="RelayList_value__1Fd0g">' + String(batterInfoValues[i][j]) + '</dd>' + '</div>';
+                                                                }
+                                                                t += '</dl>' + '</div>' + '</div>' + '</div>';
+                                                                t += '<div class="RelayList_result_area__2j4Gl">';
+                                                                if (batterResults[i] != undefined) t += '<div class="RelayList_main_info__zGpeF">';
+                                                                if (runnerResults[i] != undefined) {
+                                                                    for (var j = 0; j < runnerResults[i].length; j++) {
+                                                                        if (runnerResults[i][j].slice(-2) != "홈인") {
+                                                                            t += '<span class="RelayList_text__tFNjV">' + runnerResults[i][j] + '</span>';
+                                                                        }
+                                                                        else {
+                                                                           t += '<em class="RelayList_point__1IjBt">' + runnerResults[i][j] + '</em>';
+                                                                        }
+                                                                    }
+                                                                }
+                                                                if (batterResults[i] != undefined) {
+                                                                    if (batterResults[i].slice(-2) == "M)") {
+                                                                        t += '<em class="RelayList_point__1IjBt">' + batterName[i] + " : " + batterResults[i] + '</em></span><button type="button" aria-pressed="true" class="RelayList_button_more__2HKpg">기록 펼치기</button>';
+                                                                    } else {
+                                                                        t += '<span class="RelayList_text__tFNjV">' + batterName[i] + " : " + batterResults[i] + '</span><button type="button" aria-pressed="true" class="RelayList_button_more__2HKpg">기록 펼치기</button>';
+                                                                      }
+                                                                }
+                                                                if (batterResults[i] != undefined) t += '</div>';
+                                                                t += '<ul class="RelayList_history_list__13jzg">';
+                                                                var balls = 0;
+                                                                var sCounts = 0;
+                                                                var bCounts = 0;
+                                                                for (var x = 0; x <= batterBalls[i].length; x++) {
+                                                                  var a = batterBalls[i][x];
+                                                                  if (a == "스트라이크" || a == "헛스윙" || a == "번트파울" || a == "헛스윙번트") sCounts += 1;
+                                                                  if (a == "볼") bCounts += 1;
+                                                                  if (a == "파울" && sCounts != 2) sCounts += 1;
+                                                                }
+                                                                for (var k = 0; k <= batterBalls[i].length; k++) {
+                                                                  var a = batterBalls[i][k];
+                                                                  if (a == "타격" || a == "스트라이크" || a == "파울" || a == "볼" || a == "번트파울" || a == "헛스윙번트" || a == "헛스윙") balls += 1;
+                                                                }
+                                                                for (var j = batterBalls[i].length; j >= 0; j--) {
+                                                                    var a = batterBalls[i][j];
+                                                                    if (batterBalls[i][j] == "타격") {
+                                                                        t += '<li class="RelayList_history_item__UEQst RelayList_type_pitch__3jVsu"><em class="RelayList_pitch__38zIi"><span class="RelayList_pitch_number__YlthP RelayList_type_hit__14Kiy">' + Number(balls) + '</span><span class="blind">구</span><span class="RelayList_text__tFNjV">' + a + '</span></em><span class="RelayList_ball_info__2Ze9H"></span></li>';
+                                                                        balls -= 1;
+                                                                    } else if (a == "스트라이크" || a == "헛스윙" || a == "번트파울" || a == "헛스윙번트" || a == "파울") {
+                                                                        if (a == "파울" && sCounts != 2) sCounts -= 1;
+                                                                        t += '<li class="RelayList_history_item__UEQst RelayList_type_pitch__3jVsu"><em class="RelayList_pitch__38zIi"><span class="RelayList_pitch_number__YlthP">' + Number(balls) + '</span><span class="blind">구</span><span class="RelayList_text__tFNjV">' + a + '</span></em><span class="RelayList_ball_info__2Ze9H"></span><span class="RelayList_ball_count__2D8Rd"><span class="blind">볼카운트</span>' + Number(bCounts) + " - " + Number(sCounts) + '</span></li>';
+                                                                        if (a == "스트라이크" || a == "헛스윙") sCounts -= 1;
+                                                                        balls -= 1;
+                                                                    } else if (a == "볼") {
+                                                                        t += '<li class="RelayList_history_item__UEQst RelayList_type_pitch__3jVsu"><em class="RelayList_pitch__38zIi"><span class="RelayList_pitch_number__YlthP RelayList_type_ball__CqrwE">' + Number(balls) + '</span><span class="blind">구</span><span class="RelayList_text__tFNjV">' + a + '</span></em><span class="RelayList_ball_info__2Ze9H"></span><span class="RelayList_ball_count__2D8Rd"><span class="blind">볼카운트</span>' + Number(bCounts) + " - " + Number(sCounts) + '</span></li>';
+                                                                        bCounts -= 1;
+                                                                        balls -= 1;
+                                                                    } else if (a != undefined){
+                                                                        t += '<li class="RelayList_history_item__UEQst"><em class="RelayList_pitch__38zIi"><span class="RelayList_text__tFNjV">' + a + '</span></em></li>';
+                                                                    }
+                                                                }
+                                                                t += '</ul>' + '</div>' + '</div>';
+                                                            }
+                                                            a = document.getElementById("inn3top");
+                                                            a.innerHTML = t;
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="RelayInfo_relay_info_group__1aqtH">
+                                            <div class="RelayList_comp_relay_list__3tE9B">
+                                                <div class="RelayInfo_relay_info_area__Sha3f">
+                                                    <div class="OffenseTitle_comp_offense_title__2qIHb">
+                                                        <div class="OffenseTitle_title_area__wtg1l"><strong class="OffenseTitle_title__1LKfI">2회말 - 롯데공격</strong></div>
+                                                    </div>
+                                                    <div class="RelayList_comp_relay_list__3tE9B" id = "inn2btm">
+                                                        <script type="text/javascript">
+                                                            var batters = 4;
+                                                            var startBorder = 9;
+                                                            var endBorder = 6;
+                                                            var batterAvgs = ["타율 0.282",
+                                                                              "타율 0.278",
+                                                                              "타율 0.224",
+                                                                              "타율 0.229"];
+                                                            var batterInfoValues = [[1, 1, 0, 0, 0, 0, 0, 0],
+                                                                                    [1, 1, 0, 0, 0, 0, 0, 0],
+                                                                                    [1, 1, 1, 0, 1, 0, 0, 0],
+                                                                                    [1, 1, 1, 1, 0, 0, 0, 0]];
+                                                            var batterInfoItems = ["타석", "타수", "안타", "득점", "타점", "홈런", "볼넷", "피삼진"];
+                                                            var batterResults = ["2루수 땅볼 아웃 (2루수 -&gt; 1루수 송구아웃)",
+                                                                                 "유격수 병살타 아웃 (유격수 -&gt; 2루수 -&gt; 1루수 송구아웃)",
+                                                                                 "우중간 1루타",
+                                                                                 "좌익수 왼쪽 2루타"];
+                                                            var batterBalls = [["타격"],
+                                                                               ["스트라이크", "타격"],
+                                                                               ["스트라이크", "파울", "볼", "2루주자 노진혁 : 폭투로 3루까지 진루", "볼", "타격"],
+                                                                               ["스트라이크", "볼", "타격"]];
+                                                            var runnerResults = [[],
+                                                                                 ["1루주자 박승욱 : 포스아웃 (유격수 -&gt; 2루수 2루 터치아웃)"],
+                                                                                 ["3루주자 노진혁 : 홈인"],
+                                                                                 []];
+
+                                                            var i = startBorder;
+                                                            var batterIds = [];
+                                                            var batterYears = [];
+                                                            var batterName = [];
+                                                            var batterOrders = [];
+                                                            for (var cnt = 0; cnt < batters; cnt++) {
+                                                                batterIds.push(homePlayers[i - 1][2]);
+                                                                batterYears.push(homePlayers[i - 1][1]);
+                                                                batterName.push(homePlayers[i - 1][0]);
+                                                                batterOrders.push(i + "번타자");
+                                                                i = i - 1;
+                                                                if (i < 1)
+                                                                    i = 9;
+                                                            }
+                                                            var t = "";
+                                                            for (var i = 0; i < batters; i++) {
+                                                                t += '<div class="RelayList_player_area__2ur0q">';
+                                                                t += '<div class="RelayList_player_info__380QS">';
+                                                                t += '<div class="RelayList_image_area__2SkIi"><span class="RelayList_image__1aYtI"><img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/person/middle/' + batterYears[i] + '/' +  String(batterIds[i]) + '.jpg?type=w54" alt="" width="40" height="47"></span></div>';
+                                                                t += '<div class="RelayList_record_area__1utnx">';
+                                                                t += '<div class="RelayList_profile_info__2n-fN"><strong class="RelayList_name__1THfS">' + batterName[i] + '</strong><span class="RelayList_position__M6m4z">' + batterOrders[i] + '</span><em class="RelayList_average__GnAvE">' + batterAvgs[i] + '</em></div>';
+                                                                t += '<div class="RelayList_sub_info_wrap__m4KuK">';
+                                                                t += '<dl class="RelayList_sub_info__KV9-f">';
+                                                                for (var j = 0; j < 8; j++) {
+                                                                    t += '<div class="RelayList_sub_info_item__LPE8f">';
+                                                                    t += '<dt class="RelayList_kind__2m12U">' + batterInfoItems[j] + '</dt>';
+                                                                    t += '<dd class="RelayList_value__1Fd0g">' + String(batterInfoValues[i][j]) + '</dd>' + '</div>';
+                                                                }
+                                                                t += '</dl>' + '</div>' + '</div>' + '</div>';
+                                                                t += '<div class="RelayList_result_area__2j4Gl">';
+                                                                if (batterResults[i] != undefined) t += '<div class="RelayList_main_info__zGpeF">';
+                                                                if (runnerResults[i] != undefined) {
+                                                                    for (var j = 0; j < runnerResults[i].length; j++) {
+                                                                        if (runnerResults[i][j].slice(-2) != "홈인") {
+                                                                            t += '<span class="RelayList_text__tFNjV">' + runnerResults[i][j] + '</span>';
+                                                                        }
+                                                                        else {
+                                                                           t += '<em class="RelayList_point__1IjBt">' + runnerResults[i][j] + '</em>';
+                                                                        }
+                                                                    }
+                                                                }
+                                                                if (batterResults[i] != undefined) {
+                                                                    if (batterResults[i].slice(-2) == "M)") {
+                                                                        t += '<em class="RelayList_point__1IjBt">' + batterName[i] + " : " + batterResults[i] + '</em></span><button type="button" aria-pressed="true" class="RelayList_button_more__2HKpg">기록 펼치기</button>';
+                                                                    } else {
+                                                                        t += '<span class="RelayList_text__tFNjV">' + batterName[i] + " : " + batterResults[i] + '</span><button type="button" aria-pressed="true" class="RelayList_button_more__2HKpg">기록 펼치기</button>';
+                                                                      }
+                                                                }
+                                                                if (batterResults[i] != undefined) t += '</div>';
+                                                                t += '<ul class="RelayList_history_list__13jzg">';
+                                                                var balls = 0;
+                                                                var sCounts = 0;
+                                                                var bCounts = 0;
+                                                                for (var x = 0; x <= batterBalls[i].length; x++) {
+                                                                  var a = batterBalls[i][x];
+                                                                  if (a == "스트라이크" || a == "헛스윙" || a == "번트파울" || a == "헛스윙번트") sCounts += 1;
+                                                                  if (a == "볼") bCounts += 1;
+                                                                  if (a == "파울" && sCounts != 2) sCounts += 1;
+                                                                }
+                                                                for (var k = 0; k <= batterBalls[i].length; k++) {
+                                                                  var a = batterBalls[i][k];
+                                                                  if (a == "타격" || a == "스트라이크" || a == "파울" || a == "볼" || a == "번트파울" || a == "헛스윙번트" || a == "헛스윙") balls += 1;
+                                                                }
+                                                                for (var j = batterBalls[i].length; j >= 0; j--) {
+                                                                    var a = batterBalls[i][j];
+                                                                    if (batterBalls[i][j] == "타격") {
+                                                                        t += '<li class="RelayList_history_item__UEQst RelayList_type_pitch__3jVsu"><em class="RelayList_pitch__38zIi"><span class="RelayList_pitch_number__YlthP RelayList_type_hit__14Kiy">' + Number(balls) + '</span><span class="blind">구</span><span class="RelayList_text__tFNjV">' + a + '</span></em><span class="RelayList_ball_info__2Ze9H"></span></li>';
+                                                                        balls -= 1;
+                                                                    } else if (a == "스트라이크" || a == "헛스윙" || a == "번트파울" || a == "헛스윙번트" || a == "파울") {
+                                                                        if (a == "파울" && sCounts != 2) sCounts -= 1;
+                                                                        t += '<li class="RelayList_history_item__UEQst RelayList_type_pitch__3jVsu"><em class="RelayList_pitch__38zIi"><span class="RelayList_pitch_number__YlthP">' + Number(balls) + '</span><span class="blind">구</span><span class="RelayList_text__tFNjV">' + a + '</span></em><span class="RelayList_ball_info__2Ze9H"></span><span class="RelayList_ball_count__2D8Rd"><span class="blind">볼카운트</span>' + Number(bCounts) + " - " + Number(sCounts) + '</span></li>';
+                                                                        if (a == "스트라이크" || a == "헛스윙") sCounts -= 1;
+                                                                        balls -= 1;
+                                                                    } else if (a == "볼") {
+                                                                        t += '<li class="RelayList_history_item__UEQst RelayList_type_pitch__3jVsu"><em class="RelayList_pitch__38zIi"><span class="RelayList_pitch_number__YlthP RelayList_type_ball__CqrwE">' + Number(balls) + '</span><span class="blind">구</span><span class="RelayList_text__tFNjV">' + a + '</span></em><span class="RelayList_ball_info__2Ze9H"></span><span class="RelayList_ball_count__2D8Rd"><span class="blind">볼카운트</span>' + Number(bCounts) + " - " + Number(sCounts) + '</span></li>';
+                                                                        bCounts -= 1;
+                                                                        balls -= 1;
+                                                                    } else if (a != undefined){
+                                                                        t += '<li class="RelayList_history_item__UEQst"><em class="RelayList_pitch__38zIi"><span class="RelayList_text__tFNjV">' + a + '</span></em></li>';
+                                                                    }
+                                                                }
+                                                                t += '</ul>' + '</div>' + '</div>';
+                                                            }
+                                                            a = document.getElementById("inn2btm");
+                                                            a.innerHTML = t;
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="RelayInfo_relay_info_group__1aqtH">
+                                            <div class="RelayList_comp_relay_list__3tE9B">
+                                                <div class="RelayInfo_relay_info_area__Sha3f">
+                                                    <div class="OffenseTitle_comp_offense_title__2qIHb">
+                                                        <div class="OffenseTitle_title_area__wtg1l"><strong class="OffenseTitle_title__1LKfI">2회초 - 삼성공격</strong></div>
+                                                    </div>
+                                                    <div class="RelayList_comp_relay_list__3tE9B" id = "inn2top">
+                                                        <script type="text/javascript">
+                                                            var batters = 4;
+                                                            var startBorder = 1;
+                                                            var endBorder = 7;
+                                                            var batterAvgs = ["타율 0.375",
+                                                                              "타율 0.269",
+                                                                              "타율 0.286",
+                                                                              "타율 0.254"];
+                                                            var batterInfoValues = [[2, 2, 1, 1, 0, 0, 0, 0],
+                                                                                    [1, 0, 0, 0, 0, 0, 1, 0],
+                                                                                    [1, 1, 0, 0, 0, 0, 0, 0],
+                                                                                    [1, 1, 0, 0, 0, 0, 0, 0]];
+                                                            var batterInfoItems = ["타석", "타수", "안타", "득점", "타점", "홈런", "볼넷", "피삼진"];
+                                                            var batterResults = ["좌익수 플라이 아웃",
+                                                                                 "볼넷",
+                                                                                 "유격수 땅볼 아웃 (유격수 -&gt; 1루수 송구아웃)",
+                                                                                 "유격수 땅볼 아웃 (유격수 -&gt; 1루수 송구아웃)"];
+                                                            var batterBalls = [["볼", "파울", "타격"],
+                                                                               ["스트라이크", "헛스윙", "볼", "파울", "볼", "볼", "파울", "파울", "볼"],
+                                                                               ["스트라이크", "볼", "볼", "스트라이크", "타격"],
+                                                                               ["볼", "스트라이크", "타격"]];
+                                                            var runnerResults = [[],
+                                                                                 [],
+                                                                                 [],
+                                                                                 []];
 
                                                             var i = startBorder;
                                                             var batterIds = [];
