@@ -10,7 +10,7 @@ let printScheduleInfo = () => {
         t += '<tr><td rowspan="' + Number(gameData[i].length - 1) + '"><strong>' + gameData[i][0] + '</strong>(' + gameData[i][1] + ')</td>';
 
         for (var j = 2; j < Number(gameData[i].length); j++) {
-            t += '<tr><td width = 100>' + gameData[i][j][5] + '</td><td><img src = "https://statiz.sporki.com/data/team/ci/' + teamInfos[Number(gameData[i][j][0] - 1)][2] + '/' + teamInfos[Number(gameData[i][j][0] - 1)][1] + '.svg" width = "50" height = "50"></img></td><td bgcolor = ';
+            t += '<tr><td width = 100>' + gameData[i][j][5] + '</td><td style="background: linear-gradient(to right, rgb(' + teamInfos[Number(gameData[i][j][0] - 1)][5] + '), rgb(' + teamInfos[Number(gameData[i][j][0] - 1)][4] + ')); color: rgb(238, 238, 238);"><img src = "https://statiz.sporki.com/data/team/ci/' + teamInfos[Number(gameData[i][j][0] - 1)][2] + '/' + teamInfos[Number(gameData[i][j][0] - 1)][1] + '.svg" width = "50" height = "50"></img></td><td bgcolor = ';
 
             if (Number(gameData[i][j][2]) > Number(gameData[i][j][3])) // 색깔
                 t += teamInfos[Number(gameData[i][j][0] - 1)][3];
@@ -31,7 +31,7 @@ let printScheduleInfo = () => {
             else
                 t += gameData[i][j][2] + ' : <b>' + gameData[i][j][3] + '</b>';
 
-            t += '<br>' + gameData[i][j][4] + '</p></td><td><img src = "https://statiz.sporki.com/data/team/ci/' + teamInfos[Number(gameData[i][j][1] - 1)][2] + '/' + teamInfos[Number(gameData[i][j][1] - 1)][1] + '.svg" width = "50" height = "50"></img></td><td width = 100>' + gameData[i][j][6] + '</td><td>';
+            t += '<br>' + gameData[i][j][4] + '</p></td><td style="background: linear-gradient(to right, rgb(' + teamInfos[Number(gameData[i][j][1] - 1)][4] + '), rgb(' + teamInfos[Number(gameData[i][j][1] - 1)][5] + ')); color: rgb(238, 238, 238);"><img src = "https://statiz.sporki.com/data/team/ci/' + teamInfos[Number(gameData[i][j][1] - 1)][2] + '/' + teamInfos[Number(gameData[i][j][1] - 1)][1] + '.svg" width = "50" height = "50"></img></td><td width = 100>' + gameData[i][j][6] + '</td><td>';
 
             if (gameData[i][j][8])
                 t += '<a href="game/' + gameData[i][j][11] + '/preview.html" onclick="clickcr(this, "sch.gamerecord", "", "", event);"><img width="61" height="23" alt="경기결과" src="https://ssl.pstatic.net/static/sports/2021/pc/04/08/btn_power.gif"></a>';
