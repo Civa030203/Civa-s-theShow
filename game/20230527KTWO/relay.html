@@ -4899,7 +4899,7 @@
         var awayInfo = [];
         var homeInfos = [];
         var homeInfo = [];
-        var teamImages = ["https://sports-phinf.pstatic.net/team/kbo/default/KT.png?type=f108_108", "https://i.namu.wiki/i/tHRSUlrIFRhIMJgT_I1ZjitNaI4b1VrVhFbU2_zNA6gWC45fKvvtvgU5vTzgOrzp0lnpLdCP5jLy6g3TRS4YHSKenggn0St7bLXGI-gwUW13NlGATv2tw_2nOBVbvSkfbQMmpQl94QnuEExC68WptQ.svg"];
+        var teamImages = ["https://sports-phinf.pstatic.net/team/kbo/default/KT.png?type=f108_108", "https://statiz.sporki.com/data/team/ci/2018/10001.svg"];
         var awayScore = ["1", "0", "4", "0", "0", "0", "0", "0", "0"];
         var homeScore = ["1", "0", "0", "0", "0", "2", "0", "0", "4"];
         var awayTeamScoreMisc = ["8", "1", "6"]; // H E B
@@ -4932,9 +4932,9 @@
         gameInfos.push("gameState", "gameDate", "gameStadium");
         gameInfo.push("경기종료", "05.27 18:30", "목동");
         awayInfos.push("awayTeamName", "awayTeamPitcher");
-        awayInfo.push("KT", "투-박영현");
+        awayInfo.push("KT", "패-김재윤");
         homeInfos.push("homeTeamName", "homeTeamPitcher");
-        homeInfo.push("넥센", "투-하영민");
+        homeInfo.push("넥센", "승-이영준");
     </script>
     <div id="root">
         <div class="u_skip"><a href="#content">본문 바로가기</a></div>
@@ -4947,7 +4947,7 @@
                             <div class="LivePlayer_player_wrap__2-kPW" style="display: none;">
                                 <div class="LivePlayer_container__1YIjN"></div>
                             </div>
-                            <div class="MatchBox_comp_match_box__1oRmr MatchBox_type_finished__1kK4-" style="">
+                            <div class="MatchBox_comp_match_box__1oRmr MatchBox_type_finished__1kK4-" style="background: linear-gradient(to right, rgb(35, 31, 32), rgb(108, 17, 38)); color: rgb(238, 238, 238);">
                                 <div class="MatchBox_info__2l4DE">
                                     <p class="MatchBox_state__2AzL_" style="" id="gameState"></p>
                                     <p class="MatchBox_date__1bJ9G" id="gameDate"><span class="MatchBox_time__2z_nB"></span></p>
@@ -5037,7 +5037,7 @@
                                     a.innerText = gameScore[1];
                                 </script>
                             </div>
-                            <div class="ScoreBox_comp_score_box__1jaYr" style="">
+                            <div class="ScoreBox_comp_score_box__1jaYr" style="background: linear-gradient(to right, rgb(35, 31, 32), rgb(108, 17, 38)); color: rgb(238, 238, 238);">
                                 <div class="ScoreBox_score_board__2hY8- ScoreBox_type_table__2T476 ScoreBox_type_baseball__38_92">
                                     <div class="ScoreBox_title__2jVlJ" aria-hidden="true">
                                         <div class="ScoreBox_team__2gH5O" style="">팀명</div>
@@ -5052,7 +5052,7 @@
                                         </script>
                                     </div>
                                     <div class="ScoreBox_round__1sOLq">
-                                        <table class="ScoreBox_board_table__3V6uh">
+                                        <table class="ScoreBox_board_table__3V6uh" style="color: rgb(255, 255, 255);">
                                             <caption class="blind">스코어보드 경기현황</caption>
                                             <thead>
                                                 <tr id = "gameSBoardGeneral">
@@ -5091,7 +5091,7 @@
                                         </table>
                                     </div>
                                     <div class="ScoreBox_result__3atD0" style="">
-                                        <table class="ScoreBox_board_table__3V6uh">
+                                        <table class="ScoreBox_board_table__3V6uh" style="color: rgb(255, 255, 255);">
                                             <caption class="blind">스코어보드 종합</caption>
                                             <thead>
                                                 <tr>
@@ -5169,7 +5169,7 @@
                                                             var batterInfoItems = ["타석", "타수", "안타", "득점", "타점", "홈런", "볼넷", "피삼진"];
                                                             var batterResults = [, "우익수 뒤 홈런 (홈런거리 : 120M)", "우익수 앞 1루타", "우중간 1루타", "우중간 2루타"];
                                                             var batterBalls = [[], ["투수 김재윤 : 투수 박영현(으)로 교체", "볼", "볼", "파울", "스트라이크", "투수 2루 견제", "타격"], ["스트라이크", "볼", "헛스윙", "타격"], ["스트라이크", "타격"], ["좌익수 알포드 : 우익수(으)로 수비위치 변경", "대타 강백호 : 좌익수(으)로 수비위치 변경", "투수 주권 : 투수 김재윤(으)로 교체", "스트라이크", "파울", "타격"]];
-                                                            var runnerResults = [[], ["2루주자 김준완 : 홈인", "1루주자 김휘집 : 홈인"], ["3루주자 임병욱 : 홈인", "1루주자 김준완 : 2루까지 진루"], ["2루주자 임병욱 : 3루까지 진루"], []];
+                                                            var runnerResults = [[], ["경기종료", "승리투수 : 이영준(3 - 0)", "패전투수 : 김재윤(1 - 2)", "패전팀 홀드투수 : 하준호(4)", "패전팀 홀드투수 : 주권(2)", "2루주자 김준완 : 홈인", "1루주자 김휘집 : 홈인"], ["3루주자 임병욱 : 홈인", "1루주자 김준완 : 2루까지 진루"], ["2루주자 임병욱 : 3루까지 진루"], []];
 
                                                             var i = startBorder;
                                                             var batterIds = [];
